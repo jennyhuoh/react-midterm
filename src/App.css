@@ -1,0 +1,177 @@
+@import '~antd/dist/antd.css';
+@font-face {
+  font-family: 'Adobe Clean Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Adobe Clean Regular');
+  }
+
+.App {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  align-self: center;
+  margin: auto;
+}
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1500px;
+  }
+} 
+@media (max-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* Header */
+.ant-layout-header {
+  background-color: #fff;
+  width: 100vw;
+  align-self: center;
+}
+.layout-header{
+  height: 100px;
+  
+}
+.layout-footer {
+  height: 10vh;
+}
+.ant-layout-footer {
+  background-color: #FFE283;
+  width: 100vw;
+  height: 15vh;
+}
+
+.logo {
+  position: absolute;
+  width: 12vh;
+  margin-top: 1vh;
+  margin-left: -1.5vh;
+}
+
+.headerMenu {
+  width: 100vw;
+}
+
+.headerText {
+  font-size: 35px;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  color: #969696;
+}
+
+.headerTextHome {
+  width: 17vh;
+}
+
+.headerTextBurger {
+  width: 23vh;
+}
+
+.headerTextContact {
+  width: 23vh;
+}
+
+.headerItems :hover .headerText {
+  color: #000000;
+}
+
+.headerTextBox {
+  display: flex;
+  justify-content: center;
+}
+.ant-menu-horizontal {
+  border-bottom: transparent;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  border-bottom: 4px solid #FFE283;
+}
+
+h1.headerText {
+  margin-bottom: -12px;
+  line-height: 3;
+  text-align: center;
+}
+/* Home */
+.imgHome {
+  width: 100vw;
+  margin-top: 28vh;
+}
+
+.homeContent {
+  background-color: #fff;
+}
+
+.sectionHome {
+  height: 100vh;
+}
+
+.homeText {
+  font-size: 40px;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  text-align: center;
+  line-height: 4;
+}
+
+.imgYellow {
+  width: 29vw;
+  height: 85vh;
+}
+
+.stepFour {
+  height: 85vh;
+  padding-top: 6vh;
+}
+.stepFive {
+  height: 60vh;
+  padding-top: 8vh;
+}
+
+.homeStepTitle {
+  font-size: 50px;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  margin-bottom: -0.5vh;
+  letter-spacing: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.imgHomeBurger {
+  width: 40vh;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.step {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.homeStepSummary {
+  font-size: 30px;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  letter-spacing: 10px;
+  font-weight: 400;
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.imgHomeStart {
+  width: 62vh;
+  height: 26vh;
+}
+
+.btnStart {
+  width: 35vh;
+  padding-top: 9vh;
+}
