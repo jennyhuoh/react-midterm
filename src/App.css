@@ -62,21 +62,36 @@
 }
 
 .headerText {
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Andale Mono", AndaleMono, monospace;
   color: #969696;
 }
 
 .headerTextHome {
-  width: 17vh;
+  width: 16vh;
+  padding-top: 20px;
+}
+.headerTextLink:hover .headerTextHome {
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 .headerTextBurger {
-  width: 23vh;
+  width: 22vh;
+  padding-top: 20px;
+}
+.headerTextLink:hover .headerTextBurger {
+  padding-bottom: 20px;
+  padding-left: 22px;
 }
 
 .headerTextContact {
-  width: 23vh;
+  width: 22vh;
+  padding-top: 20px;
+}
+.headerTextLink:hover .headerTextContact {
+  padding-bottom: 20px;
+  padding-left: 14px;
 }
 
 .headerItems :hover .headerText {
@@ -92,12 +107,35 @@
 }
 
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
-  border-bottom: 4px solid #FFE283;
+  /* border-bottom: 4px solid #FFE283; */
+  border-bottom: transparent
 }
 
+.headerTextLink:hover .homeLine {
+  width: 80px;
+  height: 55px;
+  border-bottom: 4px solid #FFE283;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.headerTextLink:hover .burgerLine {
+  width: 120px;
+  height: 55px;
+  border-bottom: 4px solid #FFE283;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.headerTextLink:hover .contactLine {
+  width: 135px;
+  height: 55px;
+  border-bottom: 4px solid #FFE283;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
 h1.headerText {
-  margin-bottom: -12px;
-  line-height: 3;
   text-align: center;
 }
 /* Home */
@@ -115,7 +153,7 @@ h1.headerText {
 }
 
 .homeText {
-  font-size: 40px;
+  font-size: 36px;
   font-family: "Andale Mono", AndaleMono, monospace;
   text-align: center;
   line-height: 4;
@@ -136,7 +174,7 @@ h1.headerText {
 }
 
 .homeStepTitle {
-  font-size: 50px;
+  font-size: 46px;
   font-family: "Adobe Clean Regular", sans-serif;
   color: #555555;
   margin-bottom: -0.5vh;

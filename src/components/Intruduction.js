@@ -60,7 +60,7 @@ export default function Introduction() {
             </div>
             <div className="step stepFour">
                 <h2 className="homeStepTitle">STEP4</h2>
-                <hr align="center" width="10%" style={{border: "1px solid #555555"}}/>
+                <hr align="center" width="7%" style={{border: "1px solid #555555"}}/>
                 <h4 className="homeStepSummary">Complete!</h4>
                 <img src={imgStepFourBurger} class="imgHomeBurger" />
             </div>
