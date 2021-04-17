@@ -1,0 +1,74 @@
+[
+    {
+        "id": "bb1",
+        "category": "Burger Buns",
+        "name": "Classic Buns",
+        "price": 50,
+        "currency": "NT",
+        "countInStock": 1
+    },
+    {
+        "id": "bb2",
+        "category": "Burger Buns",
+        "name": "Black Buns",
+        "price": 60,
+        "currency": "NT",
+        "countInStock": 1 
+    },
+    {
+        "id": "m1",
+        "category": "Meat",
+        "name": "Fried Shrimp",
+        "price": 70,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "m2",
+        "category": "Meat",
+        "name": "Bacon",
+        "price": 70,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "m3",
+        "category": "Meat",
+        "name": "Beef",
+        "price": 80,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i1",
+        "category": "Ingredient",
+        "name": "Cheese",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i2",
+        "category": "Ingredient",
+        "name": "Vegetable",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i3",
+        "category": "Ingredient",
+        "name": "Tomato",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i4",
+        "category": "Ingredient",
+        "name": "Onion",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    }
+]

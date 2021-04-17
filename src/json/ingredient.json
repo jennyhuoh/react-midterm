@@ -1,0 +1,34 @@
+[
+    {
+        "id": "i1",
+        "category": "Ingredient",
+        "name": "Cheese",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i2",
+        "category": "Ingredient",
+        "name": "Vegetable",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i3",
+        "category": "Ingredient",
+        "name": "Tomato",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "i4",
+        "category": "Ingredient",
+        "name": "Onion",
+        "price": 15,
+        "currency": "NT",
+        "countInStock": 2
+    }
+]

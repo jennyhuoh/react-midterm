@@ -1,0 +1,26 @@
+[
+    {
+        "id": "m1",
+        "category": "Meat",
+        "name": "Fried Shrimp",
+        "price": 70,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "m2",
+        "category": "Meat",
+        "name": "Bacon",
+        "price": 70,
+        "currency": "NT",
+        "countInStock": 2
+    },
+    {
+        "id": "m3",
+        "category": "Meat",
+        "name": "Beef",
+        "price": 80,
+        "currency": "NT",
+        "countInStock": 2
+    }
+]

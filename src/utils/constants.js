@@ -1,0 +1,2 @@
+export const SET_PAGE_CONTENT = 'SET_PAGE_CONTENT';
+export const SET_BURGER_DETAIL = 'SET_BURGER_DETAIL';

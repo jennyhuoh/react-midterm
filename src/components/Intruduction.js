@@ -70,7 +70,7 @@ export default function Introduction() {
                         <img src={imgStartLeft} className="imgHomeStart imgHomeLStart" />
                     </Col>
                     <Col span={8}>
-                        <Link to="/">
+                        <Link to="/burger">
                             <img src={btnStart} className="btnStart" />
                         </Link>
                     </Col>

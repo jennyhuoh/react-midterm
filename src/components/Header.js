@@ -1,9 +1,18 @@
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
+import { useContext } from 'react';
 import imgLogo from '../images/burger-logo.png';
-//import Home from '../pages/Home'
+import { getJSON } from '../api/index';
+import { setPageContent } from '../actions/index';
+import { StoreContext } from '../store/index';
+
 
 export default function Header() {
+    const { dispatch } = useContext(StoreContext);
+    const onClickBurger = () => {
+        setPageContent(dispatch, getJSON("/burgerBuns"))
+    }
+
     return (
         <header className="headerBgc">
             <div>
@@ -21,8 +30,8 @@ export default function Header() {
                     </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Link to="/" className="headerTextLink">
-                            <div className="headerTextBurger">
+                        <Link to="/burger" className="headerTextLink">
+                            <div className="headerTextBurger" onClick={onClickBurger}>
                                 <div className="burgerLine">
                                     <h1 className="headerText">BURGER</h1>
                                 </div>

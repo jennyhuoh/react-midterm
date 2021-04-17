@@ -41,6 +41,9 @@
   height: 100px;
   
 }
+.layout-content {
+  background-color: #fff;
+}
 .layout-footer {
   height: 10vh;
 }
@@ -49,24 +52,20 @@
   width: 100vw;
   height: 15vh;
 }
-
 .logo {
   position: absolute;
   width: 12vh;
   margin-top: 1vh;
   margin-left: -1.5vh;
 }
-
 .headerMenu {
   width: 100vw;
 }
-
 .headerText {
   font-size: 30px;
   font-family: "Andale Mono", AndaleMono, monospace;
   color: #969696;
 }
-
 .headerTextHome {
   width: 16vh;
   padding-top: 20px;
@@ -75,7 +74,6 @@
   padding-bottom: 20px;
   padding-left: 20px;
 }
-
 .headerTextBurger {
   width: 22vh;
   padding-top: 20px;
@@ -84,7 +82,6 @@
   padding-bottom: 20px;
   padding-left: 22px;
 }
-
 .headerTextContact {
   width: 22vh;
   padding-top: 20px;
@@ -93,11 +90,9 @@
   padding-bottom: 20px;
   padding-left: 15px;
 }
-
 .headerItems :hover .headerText {
   color: #000000;
 }
-
 .headerTextBox {
   display: flex;
   justify-content: center;
@@ -105,12 +100,9 @@
 .ant-menu-horizontal {
   border-bottom: transparent;
 }
-
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
-  /* border-bottom: 4px solid #FFE283; */
   border-bottom: transparent
 }
-
 .headerTextLink:hover .homeLine {
   width: 80px;
   height: 55px;
@@ -138,6 +130,7 @@
 h1.headerText {
   text-align: center;
 }
+
 /* Home */
 .imgHome {
   width: 100vw;
@@ -212,4 +205,9 @@ h1.headerText {
 .btnStart {
   width: 35vh;
   padding-top: 9vh;
+}
+
+/* burger buns */
+.select-classic-buns {
+  width: 40vh;
 }
