@@ -358,7 +358,6 @@ h1.headerText {
 }
 .btnNextBox {
   width: 80vh;
-  height: 50vh;
   display: flex;
   justify-content: flex-end;
   margin-top: 17vh;
