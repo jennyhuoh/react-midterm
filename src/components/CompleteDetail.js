@@ -14,7 +14,7 @@ import lineTwo from '../images/Line2.png';
 import { SET_PAGE_TOTAL } from '../utils/constants';
 
 function CompleteDetail() {
-     const { state, dispatch } = useContext(StoreContext);
+    const { state, dispatch } = useContext(StoreContext);
     const onClickOneMore = () => {
         dispatch({
             type: SET_PAGE_TOTAL,
