@@ -64,7 +64,7 @@ function CompleteDetail() {
                 </div>
                 <div> <img src={lineTwo} className="complete-bottom-section-line" /> </div>
                 <div className="">
-                    <Link to="/meat">
+                    <Link to="/">
                         <img src={checkOut} className="complete-bottom-section-checkOut complete-bottom-section-button" />
                     </Link>
                 </div>
