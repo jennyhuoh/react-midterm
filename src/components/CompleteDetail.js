@@ -1,61 +1,73 @@
 import { useContext, useState, useReducer } from 'react';
-import { Row, Col, Button, Select, Checkbox } from 'antd';
+import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../store/index';
-import ingredientsimg from '../images/img-top-ingredient.png';
+import completeimg from '../images/img-top-complete.png';
 import meat from '../json/meat.json';
 import burgerBuns from '../json/burgerBuns.json';
 import ingredients from '../json/ingredient.json';
 import next from '../images/btn-next.png';
-import line from '../images/line.png';
+import totalLabel from '../images/img-total.png';
+import oneMore from '../images/btn-onemore.png';
+import checkOut from '../images/btn-checkout.png';
+import lineTwo from '../images/Line2.png';
 import { SET_PAGE_TOTAL } from '../utils/constants';
 
 function CompleteDetail() {
      const { state, dispatch } = useContext(StoreContext);
-    //  const onChangeIngredients = () => {
-    //          dispatch({
-    //          type: SET_PAGE_TOTAL,
-    //          payload: state.total+15
-    //         });
-    //  }
+    const onClickOneMore = () => {
+        dispatch({
+            type: SET_PAGE_TOTAL,
+            payload: 0
+        });
+    }
     return(
         <div>
             <div className="step-bun">
-                <img className="step-bun-img" src={ingredientsimg} />
+                <img className="step-bun-img" src={completeimg} />
             </div>
             <Row className="selectSection">
-                <Col span={18}>
-                    <div className="bunsBox">
-                        <img className="select-classic-buns" src={burgerBuns[0].image} />
-                    </div>
-                    <div className="meatBox">
-                        <img className="select-classic-buns" src={ingredients[0].image} />
-                    </div>
-                    <div className="meatBox">
-                        <img className="select-classic-buns" src={meat[0].image} />
-                    </div>
-                    <div className="bunsBox">
+                <Col span={15}>
+                    <div className="posa posa-complete bunBottom">
                         <img className="select-classic-buns" src={burgerBuns[0].bottomImage} />
                     </div>
+                    <div className="posa posa-complete meat">
+                        <img className="select-classic-buns" src={meat[0].image} />
+                    </div>
+                    <div className="posa posa-complete cheese">
+                        <img className="select-classic-buns" src={ingredients[0].image} />
+                    </div>
+                    <div className="posa posa-complete vegetable">
+                        <img className="select-classic-buns" src={ingredients[1].image} />
+                    </div>
+                    <div className="posa posa-complete onion">
+                        <img className="select-classic-buns" src={ingredients[3].image} />
+                    </div>
                     
+                    <div className="posa posa-complete bunTop">
+                        <img className="select-classic-buns" src={burgerBuns[0].image} />
+                    </div>
                 </Col>
-                <Col span={6} className="selectSection-selector">
-                            
-                                    <span className="line"><img src={line} /></span>
-                                    <span className="totalPrice">TOTAL: NT {state.total}</span>
+                <Col span={9} className="selectSection-selector">
+                    <div className="completePrice">
+                        <span className="totalLabel"><img src={totalLabel} className="totalLabel-img" /></span>
+                        <span className="selectPrice"> NT {state.total}</span> 
+                    </div>
+                   
                 </Col>
             </Row>
-            <Row>
-            <div className="btnBackBox-meat">
-                        <Link to="/ingredients">
-                            <img src={next} className="btnNext-meat" />
-                        </Link>
-                    </div>
-                    <span className="btnNextBox-meat">
-                        <Link to="/meat">
-                            <img src={next} className="btnNext-meat" />
-                        </Link>
-                    </span>
+            <Row className="complete-bottom-section">
+                <div onClick={onClickOneMore}>
+                    <Link to="/burger">
+                        <img src={oneMore} className="complete-bottom-section-oneMore complete-bottom-section-button" />
+                    </Link>
+                </div>
+                <div> <img src={lineTwo} className="complete-bottom-section-line" /> </div>
+                <div className="">
+                    <Link to="/meat">
+                        <img src={checkOut} className="complete-bottom-section-checkOut complete-bottom-section-button" />
+                    </Link>
+                </div>
             </Row>
         </div>
     );

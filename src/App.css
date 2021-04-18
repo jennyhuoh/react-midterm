@@ -460,3 +460,35 @@ label.ant-checkbox-wrapper.ant-checkbox-group-item {
   display: flex;
   align-items: flex-end;
 }
+/* complete */
+.posa-complete {
+  margin-left: 65vh;
+}
+.bunTop {
+  margin-top: 10vh;
+}
+.totalLabel-img {
+  width: 20vh;
+}
+.completePrice {
+  margin-top: 25vh;
+}
+.complete-bottom-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 22vh;
+
+}
+.complete-bottom-section-button {
+  width: 34vh;
+}
+.complete-bottom-section-oneMore {
+  padding-right: 4vh;
+}
+.complete-bottom-section-checkOut {
+  padding-left: 4vh;
+}
+.complete-bottom-section-line {
+  width: 5vh;
+  margin-top: 1vh;
+}
