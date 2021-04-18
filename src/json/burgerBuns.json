@@ -3,7 +3,8 @@
         "id": "bb1",
         "category": "Burger Buns",
         "name": "Classic Buns",
-        "image": "../images/bun-black-top.png",
+        "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-classic-top.png",
+        "bottomImage": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-classic-bottom.png",
         "price": 50,
         "currency": "NT",
         "countInStock": 1
@@ -12,9 +13,10 @@
         "id": "bb2",
         "category": "Burger Buns",
         "name": "Black Buns",
-        "image": "../images/bun-black-top.png",
+        "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-black-top.png",
+        "bottomImage": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-black-bottom.png",
         "price": 60,
         "currency": "NT",
-        "countInStock": 2
+        "countInStock": 1
     }
 ]
