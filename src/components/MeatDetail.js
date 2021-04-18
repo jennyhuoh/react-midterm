@@ -33,14 +33,14 @@ function MeatDetail() {
             </div>
             <Row className="selectSection">
                 <Col span={12}>
-                    <div className="bunsBox">
-                        <img className="select-classic-buns" src={burgerBuns[0].image} />
+                <div className="posa bunsBox bunBottom">
+                        <img className="select-classic-buns" src={burgerBuns[0].bottomImage} />
                     </div>
-                    <div className="meatBox">
+                    <div className="posa bunsBox meat">
                         <img className="select-classic-buns" src={meat[0].image} />
                     </div>
-                    <div className="bunsBox">
-                        <img className="select-classic-buns" src={burgerBuns[0].bottomImage} />
+                    <div className="posa bunsBox bunTop">
+                        <img className="select-classic-buns" src={burgerBuns[0].image} />
                     </div>
                     <div className="btnBackBox-meat">
                         <Link to="/burger">
@@ -75,7 +75,7 @@ function MeatDetail() {
                                 <div className="totalPrice">TOTAL: NT {state.total}</div>
                             </div>
                     <div className="btnNextBox-meat">
-                        <Link to="/meat">
+                        <Link to="/ingredients">
                             <img src={next} className="btnNext-meat" />
                         </Link>
                     </div>

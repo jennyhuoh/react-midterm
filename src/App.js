@@ -2,6 +2,8 @@ import './App.css';
 import Home from './pages/Home';
 import Burger from './pages/Buger';
 import Meat from './pages/Meat';
+import Ingredients from './pages/Ingredients';
+import Complete from './pages/Complete';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { StoreProvider } from "./store/index";
 
@@ -13,6 +15,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/burger" component={Burger} />
           <Route exact path="/meat" component={Meat} />
+          <Route exact path="/ingredients" component={Ingredients} />
+          <Route exact path="/complete" component={Complete} />
         </Switch>
       </BrowserRouter>
     </StoreProvider>

@@ -220,6 +220,7 @@ h1.headerText {
   align-content: center;
   margin-top: 7.5vh;
 }
+
 .selectBurgerBun {
   margin-top: 36px;
   width: 38vh;
@@ -357,29 +358,105 @@ h1.headerText {
   margin-top: 2vh;
 }
 .btnNextBox {
-  width: 80vh;
+  width: 76vh;
   display: flex;
   justify-content: flex-end;
   margin-top: 17vh;
-  /* position: absolute; */
-  /* margin-right: vh; */
 }
 .line {
   margin-top: 6.5vh;
 }
 
 /* meat */
-.meatBox {
-  margin-bottom: -13.5vh;
-  text-align: center;
-}
 .btnNextBox-meat {
-  width: 80vh;
+  width: 76vh;
   display: flex;
   justify-content: flex-end;
   margin-top: 6vh;
 }
 .btnBackBox-meat {
-  margin-left: 10vh;
+  margin-left: 8vh;
   margin-top: 9.5vh;
+}
+.bunTop {
+  margin-top: 12vh;
+}
+.btnBackBox-meat {
+  margin-left: 8vh;
+  margin-top: 9.5vh;
+  height: 59vh;
+  display: flex;
+  align-items: flex-end;
+}
+/* ingredients */
+label.ant-checkbox-wrapper.ant-checkbox-group-item {
+  width: 38vh;
+  height:6.5vh;
+  background-color: #FFE283;
+  margin-top: 3vh;
+  border-radius: 25px;
+  align-items: center;
+  padding-left: 5vh;
+}
+.ant-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px;
+}
+
+.ant-checkbox + span {
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 3vh;
+  letter-spacing: 3px;
+  margin-left: 4vh;
+}
+.ant-checkbox-inner{
+  width: 18px;
+  height: 18px;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-width: 4px;
+  width: 14px;
+  height: 18px
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #FFE283;
+  border-color: #FFE283;
+}
+.priceMove {
+  position: absolute;
+  margin-top: -35vh;
+  margin-left: 39.5vh;
+}
+.priceMoveDown {
+  margin-top: 6vh;
+}
+.posa {
+  position: absolute;
+}
+.bunBottom {
+  margin-top: 33vh;
+}
+.meat {
+  margin-top: 29vh;
+}
+.cheese {
+  margin-top: 25vh;
+}
+.vegetable {
+  margin-top: 21vh;
+}
+.onion {
+  margin-top: 17vh;
+}
+.leftCol {
+  height: 60.5vh;
+}
+.btnBackBox-ingredients {
+  margin-left: 8vh;
+  margin-top: 9.5vh;
+  height: 60.5vh;
+  display: flex;
+  align-items: flex-end;
 }
