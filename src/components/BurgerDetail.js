@@ -6,7 +6,7 @@ import bun from '../images/img-top-buns.png';
 import burgerBuns from '../json/burgerBuns.json';
 import next from '../images/btn-next.png';
 import line from '../images/line.png';
-import { SET_PAGE_TOTAL } from '../utils/constants';
+import { SET_PAGE_TOTAL, SET_ITEM_BUNS } from '../utils/constants';
 import ButtonGroup from 'antd/lib/button/button-group';
 // import {setPageTotal} from '../actions/index';
 //export const StoreContext = createContext();
@@ -31,15 +31,25 @@ function BurgerDetail() {
    //const [state, dispatch] = useReducer(reducer, initialState);
 
     const onClickBurgerBuns0 = () => {
+        const bunsTemp0 = state.itemBuns.concat(burgerBuns[0].name)
         dispatch({
             type: SET_PAGE_TOTAL,
             payload: 50
         });
+        dispatch({
+            type: SET_ITEM_BUNS,
+            payload: bunsTemp0
+        });
     }
     const onClickBurgerBuns1 = () => {
+        const bunsTemp1 = state.itemBuns.concat(burgerBuns[0].name)
         dispatch({
             type: SET_PAGE_TOTAL,
             payload: 60
+        });
+        dispatch({
+            type: SET_ITEM_BUNS,
+            payload: bunsTemp1
         });
     }
 
@@ -109,7 +119,7 @@ function BurgerDetail() {
                                 </span> 
                             </div>
                           
-                            <hr width="80%" style={{border: "1px solid #707070", marginTop: "10vh", marginLeft: "-10vh"}}/>
+                            <hr width="80%" style={{border: "2px solid #707070", marginTop: "10vh", marginLeft: "-10vh"}}/>
                             <div className="totalPriceBox">
                                 <div className="totalPrice">
                                     

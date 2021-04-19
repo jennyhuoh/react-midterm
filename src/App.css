@@ -32,6 +32,20 @@
   }
 }
 /* Header */
+.cartimg {
+  width: 8vh;
+  align-items: center;
+  margin-right: 3vh;
+}
+.accountimg {
+  width: 8vh;
+  align-items: center;
+}
+.headerBgc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .ant-layout-header {
   background-color: #fff;
   width: 100vw;
@@ -45,18 +59,12 @@
   background-color: #fff;
 }
 .layout-footer {
-  height: 10vh;
-}
-.ant-layout-footer {
   background-color: #FFE283;
   width: 100vw;
   height: 15vh;
 }
 .logo {
-  position: absolute;
   width: 12vh;
-  margin-top: 1vh;
-  margin-left: -1.5vh;
 }
 .headerMenu {
   width: 100vw;
@@ -491,4 +499,154 @@ label.ant-checkbox-wrapper.ant-checkbox-group-item {
 .complete-bottom-section-line {
   width: 5vh;
   margin-top: 1vh;
+}
+.completePrice-total {
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.3vh;
+  letter-spacing: 3px;
+  padding-bottom: -5vh;
+  margin-left: 2vh;
+}
+/* cartFooter */
+.cartFooter {
+  background-color: #fff;
+  text-align: center;
+}
+.startCheckOut {
+  padding-bottom: 6vh;
+  width: 34vh;
+}
+footer.ant-layout-footer {
+  padding: 0;
+}
+/* cartList */
+.cart-item-box {
+  width: 100vw;
+  margin-top: 5vh;
+}
+.cart-item-bgc {
+  display: flex;
+  width: 135vh;
+  height: 18vh;
+  background-color: rgba(255, 226, 131, 0.2);
+  border-radius: 20px;
+  margin-left: 12%;
+  margin-top: 8vh;
+}
+.cart-burger {
+  align-items: center;
+  text-align: center;
+  width: 10vh;
+}
+.cart-bunBottom {
+  margin-top: 6.5vh;
+}
+.cart-meat {
+  margin-top: 5.5vh;
+}
+.cart-cheese {
+  margin-top: 4.5vh;
+}
+.cart-vegetable {
+  margin-top: 3.5vh;
+}
+.cart-onion {
+  margin-top: 2.5vh;
+}
+.cart-bunTop {
+  margin-top: 1vh;
+}
+.cart-buns-type {
+  width: 25vh;
+  padding-left: 5vh;
+  padding-top: 3vh;
+}
+.cart-dot {
+  font-size: 6vh;
+  padding-left: 1vh;
+}
+.cart-meat-type {
+  width: 22vh;
+  padding-left: 2vh;
+  padding-top: 3vh;
+}
+.cart-burger-bgc {
+  background-color: #fff;
+  border: 5px solid #FFE283;
+  border-radius: 50px;
+  width: 13vh;
+  height: 13vh;
+  margin-left: 6vh;
+  margin-top: 2.5vh;
+}
+.cart-posa {
+  margin-left: 1vh;
+}
+.cart-item-description {
+  display: flex;
+  background-color: #fff;
+  width: 55vh;
+  height: 10vh;
+  border-radius: 14px;
+  margin-left: 6vh;
+  margin-top: 4vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.3vh;
+  letter-spacing: 2px;
+}
+.cart-qty {
+  height: 4vh;
+  background-color: #fff;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.3vh;
+  margin-left: 11vh;
+  width: 7vh;
+  margin-top: 6.5vh;
+  text-align: center;
+  padding-top: 0.5vh;
+  border-radius: 10px;
+}
+.cart-price {
+  height: 4vh;
+  width: 10vh;
+  background-color: #fff;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.3vh;
+  letter-spacing: 2px;
+  margin-left: 15vh;
+  margin-top: 6.5vh;
+  text-align: center;
+  padding-top: 0.5vh;
+  border-radius: 10px;
+}
+.cart-title {
+  font-size: 4vh;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  text-align: center;
+  margin-top: 8vh;
+  margin-bottom: -6vh;
+}
+.cart-title-description {
+  margin-left: 60vh;
+}
+.cart-title-quantity {
+  margin-left: 20vh;
+}
+.cart-title-price {
+  margin-left: 8vh;
+}
+.cart-total-price {
+  width: 148vh;
+  padding-top: 32vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.7vh;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: flex-end;
+
 }

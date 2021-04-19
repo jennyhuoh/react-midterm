@@ -8,22 +8,42 @@ import burgerBuns from '../json/burgerBuns.json';
 import back from '../images/btn-back.png';
 import next from '../images/btn-next.png';
 import line from '../images/line.png';
-import { SET_PAGE_TOTAL } from '../utils/constants';
+import { SET_PAGE_TOTAL, SET_ITEM_MEAT } from '../utils/constants';
 
 const { Option } = Select;
 function MeatDetail() {
     const { state, dispatch } = useContext(StoreContext);
     const onClickMeat0 = () => {
+        const meatTemp0 = state.itemMeat.concat(meat[0].name)
         dispatch({
             type: SET_PAGE_TOTAL,
             payload: state.total+70,
-            
+        });
+        dispatch({
+            type: SET_ITEM_MEAT,
+            payload: meatTemp0
+        });
+    }
+    const onClickMeat1 = () => {
+        const meatTemp1 = state.itemMeat.concat(meat[1].name)
+        dispatch({
+            type: SET_PAGE_TOTAL,
+            payload: state.total+70, 
+        });
+        dispatch({
+            type: SET_ITEM_MEAT,
+            payload: meatTemp1
         });
     }
     const onClickMeat2 = () => {
+        const meatTemp2 = state.itemMeat.concat(meat[2].name)
         dispatch({
             type: SET_PAGE_TOTAL,
             payload: state.total+80
+        });
+        dispatch({
+            type: SET_ITEM_MEAT,
+            payload: meatTemp2
         });
     }
     return(
@@ -57,7 +77,7 @@ function MeatDetail() {
                                 <span className="selectPrice"> ${meat[0].price}</span>
                             </div>
                             <div class="burgerBun-btn">
-                                <Button className="selectBurgerBun" shape="round" onClick={onClickMeat0}>
+                                <Button className="selectBurgerBun" shape="round" onClick={onClickMeat1}>
                                     {meat[1].name}
                                 </Button>
                                 <span className="line"><img src={line} /></span>

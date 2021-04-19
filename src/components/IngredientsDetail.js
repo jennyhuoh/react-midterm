@@ -9,7 +9,7 @@ import ingredients from '../json/ingredient.json';
 import back from '../images/btn-back.png';
 import next from '../images/btn-next.png';
 import line from '../images/line.png';
-import { SET_PAGE_TOTAL } from '../utils/constants';
+import { SET_PAGE_TOTAL, SET_ITEM_NUM, SET_ITEM_PRICE } from '../utils/constants';
 
 const { Option } = Select;
 function IngredientsDetail() {
@@ -20,6 +20,17 @@ function IngredientsDetail() {
              type: SET_PAGE_TOTAL,
              payload: state.total+15
             });
+     }
+     const onClickNext = () => {
+         const priceTemp = state.itemPrice.concat(state.total)
+        dispatch({
+            type: SET_ITEM_NUM,
+            payload: state.itemNum+1 
+        });
+        dispatch({
+            type: SET_ITEM_PRICE,
+            payload: priceTemp
+        });
      }
     return(
         <div>
@@ -81,7 +92,7 @@ function IngredientsDetail() {
                             <div className="totalPriceBox">
                                 <div className="totalPrice">TOTAL: NT {state.total}</div>
                             </div>
-                    <div className="btnNextBox-meat">
+                    <div className="btnNextBox-meat" onClick={onClickNext}>
                         <Link to="/complete">
                             <img src={next} className="btnNext-meat" />
                         </Link>

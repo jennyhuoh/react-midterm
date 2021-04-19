@@ -11,7 +11,7 @@ import totalLabel from '../images/img-total.png';
 import oneMore from '../images/btn-onemore.png';
 import checkOut from '../images/btn-checkout.png';
 import lineTwo from '../images/Line2.png';
-import { SET_PAGE_TOTAL } from '../utils/constants';
+import { SET_ITEM_NUM, SET_PAGE_TOTAL } from '../utils/constants';
 
 function CompleteDetail() {
     const { state, dispatch } = useContext(StoreContext);
@@ -51,7 +51,7 @@ function CompleteDetail() {
                 <Col span={9} className="selectSection-selector">
                     <div className="completePrice">
                         <span className="totalLabel"><img src={totalLabel} className="totalLabel-img" /></span>
-                        <span className="selectPrice"> NT {state.total}</span> 
+                        <span className="completePrice-total"> NT {state.total}</span> 
                     </div>
                    
                 </Col>
@@ -64,7 +64,7 @@ function CompleteDetail() {
                 </div>
                 <div> <img src={lineTwo} className="complete-bottom-section-line" /> </div>
                 <div className="">
-                    <Link to="/">
+                    <Link to="/shoppingCart">
                         <img src={checkOut} className="complete-bottom-section-checkOut complete-bottom-section-button" />
                     </Link>
                 </div>

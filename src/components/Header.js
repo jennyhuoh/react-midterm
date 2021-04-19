@@ -5,6 +5,8 @@ import imgLogo from '../images/burger-logo.png';
 import { getJSON } from '../api/index';
 import { setPageContent } from '../actions/index';
 import { StoreContext } from '../store/index';
+import CartSummary from '../components/CartSummary';
+import account from '../images/btn-Xaccount.png';
 
 
 export default function Header() {
@@ -54,6 +56,11 @@ export default function Header() {
                 
             </Menu>
             </div>
+            <div>
+                <CartSummary />
+                <span><img src={account} className="accountimg"/></span>
+            </div>
+            
         </header>
     );
 }
