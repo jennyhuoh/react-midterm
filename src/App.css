@@ -595,7 +595,6 @@ footer.ant-layout-footer {
 .badge {
   color: #fff;
   background-color: #fff;
-  margin-right: 4vh;
   margin-top: 0.5vh;
 }
 .bunsBoxmobile {
@@ -910,7 +909,7 @@ footer.ant-layout-footer {
   }
   .cart-item-bgc {
     width: 350px;
-    margin-left: 8%;
+    margin-left: 3.5%;
   }
   .cart-title-description {
     display: none;
@@ -952,7 +951,7 @@ footer.ant-layout-footer {
     width: 200px;
   }
   .ant-badge-count {
-    margin-right: 25px;
+    margin-right: 11px;
 
   }
 }
