@@ -589,17 +589,23 @@ footer.ant-layout-footer {
 .mobileBuns {
   display: none;
 }
-.bunsBoxmobile {
-  display: none;
-}
 .imgHomeTwo {
   display: none;
 }
 .badge {
   color: #fff;
-  background-color: #E0E0E0;
+  background-color: #fff;
   margin-right: 4vh;
   margin-top: 0.5vh;
+}
+.bunsBoxmobile {
+  display: none;
+}
+.ant-badge-count {
+  margin-right: 4vh;
+  margin-top: 0.5vh;
+  color: #fff;
+  background-color: #E0E0E0;
 }
 @media (max-width: 375px) {
   /* .ant-layout-header {
@@ -685,6 +691,7 @@ footer.ant-layout-footer {
     margin-top: -600px;
     margin-left: -65px;
   }
+  
   /* burgerBuns */
   .step-bun-img {
     display: none;
@@ -859,27 +866,27 @@ footer.ant-layout-footer {
   .complete-burger {
     width: 200px;
   }
-  .onion {
+  .mobileonion {
     margin-top: 120px;
     margin-left: 22%;
   }
-  .vegetable {
+  .mobilevegetable {
     margin-top: 140px;
     margin-left: 22%;
   }
-  .cheese {
+  .mobilecheese {
     margin-top: 160px;
     margin-left: 22%;
   }
-  .meat {
+  .mobilemeat {
     margin-top: 180px;
     margin-left: 22%;
   }
-  .bunBottom {
+  .mobilebunBottom {
     margin-top: 200px;
     margin-left: 22%;
   }
-  .bunTop {
+  .mobilebunTop {
     margin-left: 22%;
   }
   .complete-bottom-section-button {
@@ -891,7 +898,7 @@ footer.ant-layout-footer {
     margin-top: -90px;
     margin-left: 40px;
   }
-  .completePrice {
+  .completePricemobile {
     margin-left: 16%;
   }
   .complete-bottom-section-checkOut {
@@ -943,5 +950,9 @@ footer.ant-layout-footer {
   }
   .startCheckOut {
     width: 200px;
+  }
+  .ant-badge-count {
+    margin-right: 25px;
+
   }
 }

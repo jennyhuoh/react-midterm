@@ -28,29 +28,29 @@ function CompleteDetail() {
                 <img className="step-bun-img" src={completeimg} />
             </div>
             <img className="mobileBuns" src={mobileComplete} />
-            <div className="bunBoxmobile">
-                <div className="posa bunBottom">
+            <div className="bunsBoxmobile">
+                <div className="posa bunBottom mobilebunBottom">
                         <img className="select-classic-buns complete-burger" src={burgerBuns[0].bottomImage} />
                     </div>
-                    <div className="posa meat">
+                    <div className="posa meat mobilemeat">
                         <img className="select-classic-buns complete-burger" src={meat[0].image} />
                     </div>
-                    <div className="posa cheese">
+                    <div className="posa cheese mobilecheese">
                         <img className="select-classic-buns complete-burger" src={ingredients[0].image} />
                     </div>
-                    <div className="posa vegetable">
+                    <div className="posa vegetable mobilevegetable">
                         <img className="select-classic-buns complete-burger" src={ingredients[1].image} />
                     </div>
-                    <div className="posa onion">
+                    <div className="posa onion mobileonion">
                         <img className="select-classic-buns complete-burger" src={ingredients[3].image} />
                     </div>
                     
-                    <div className="posa bunTop">
+                    <div className="posa bunTop mobilebunTop">
                         <img className="select-classic-buns complete-burger" src={burgerBuns[0].image} />
                     </div>
                     <div style={{height: '125px'}}></div>
-                    <div className="completePrice">
-                        <span className="totalLabel"><img src={totalLabel} className="totalLabel-img" /></span>
+                    <div className="completePrice completePricemobile">
+                        <span className="totalLabel totalLabelmobile"><img src={totalLabel} className="totalLabel-img" /></span>
                         <span className="completePrice-total"> NT {state.total}</span> 
                     </div>
                     
