@@ -18,6 +18,7 @@ export default function Header() {
     return (
         <header className="headerBgc">
             <div>
+                
                 <img className="logo" src={imgLogo} />
             </div>
             <div className="headerTextBox">

@@ -11,11 +11,14 @@ import imgStartRight from '../images/img-Rstart.png';
 import btnStart from '../images/btn-start.png';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
+import mobileLogo from '../images/img-home2.png';
+
 
 export default function Introduction() {
     return(
         <div className="homeContent">
             <div className="sectionHome">
+            <img className="imgHomeTwo" src={mobileLogo} />
                 <img src={imgHome} className="imgHome" />
                 <h3 className="homeText">- CUSTOMIZE YOUR BURGER -</h3>
             </div>

@@ -8,7 +8,7 @@ export default function CartSummaryClicked() {
     const { state } = useContext(StoreContext);
 
     return(
-       <Badge count={state.itemNum} size={"default"} style={{color: '#fff', backgroundColor: '#E0E0E0', marginRight: '4vh', marginTop: '0.5vh' }}>
+       <Badge count={state.itemNum} size={"default"} className="badge">
            <Link to={'/shoppingCart'}>
                 <img src={cartClickedimg} className="cartimg"/>
            </Link>

@@ -26,11 +26,7 @@
     width: 1500px;
   }
 } 
-@media (max-width: 576px) {
-  .container {
-    width: 540px;
-  }
-}
+
 /* Header */
 .cartimg {
   width: 8vh;
@@ -41,6 +37,7 @@
   width: 8vh;
   align-items: center;
 }
+
 .headerBgc {
   display: flex;
   justify-content: space-between;
@@ -63,6 +60,7 @@
   width: 100vw;
   height: 15vh;
 }
+
 .logo {
   width: 12vh;
 }
@@ -285,71 +283,6 @@ h1.headerText {
   margin-top: 6.5vh;;
   margin-left: 2vh;
 }
-
-.count-qty {
-  width: 5vh;
-  height: 5vh;
-  text-align: center;
-  line-height: 2.4;
-  border: 0;
-  border-top: 1px solid #E0E0E0;
-  border-bottom: 1px solid #E0E0E0;
-}
-.count-plus {
-  width: 5vh;
-  height: 5vh;
-  background-color: #E0E0E0;
-  text-align: center;
-  align-items: center;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.count-plus:hover {
-  background-color: #E0E0E0;
-  border-color: #E0E0E0;
-}
-.count-plus:focus {
-  background-color: #E0E0E0;
-  border-color: #E0E0E0;
-}
-.count-plus-p {
-  font-size: 4vh;
-  color: #707070;
-  width: 5vh;
-  height: 5vh;
-  margin-left: -2vh;
-  margin-top: -1.5vh;
-}
-.count-minus {
-  width: 5vh;
-  height: 5vh;
-  background-color: #E0E0E0;
-  text-align: center;
-  align-items: center;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-.count-minus-p {
-  font-size: 4vh;
-  color: #707070;
-  width: 5vh;
-  height: 5vh;
-  margin-left: -2vh;
-  margin-top: -1.5vh;
-}
-.count-minus:hover {
-  background-color: #E0E0E0;
-  border-color: #E0E0E0;
-}
-.count-minus:focus {
-  background-color: #E0E0E0;
-  border-color: #E0E0E0;
-}
-.count {
-  margin-left: 6vh;
-  display: flex;
-  margin-top: 44px;
-}
 .burgerBun-btn {
   display: flex;
 }
@@ -384,7 +317,7 @@ h1.headerText {
 }
 .btnBackBox-meat {
   margin-left: 8vh;
-  margin-top: 9.5vh;
+  margin-top: 10vh;
 }
 .bunTop {
   margin-top: 12vh;
@@ -531,7 +464,7 @@ footer.ant-layout-footer {
   height: 18vh;
   background-color: rgba(255, 226, 131, 0.2);
   border-radius: 20px;
-  margin-left: 12%;
+  margin-left: 15%;
   margin-top: 8vh;
 }
 .cart-burger {
@@ -617,7 +550,7 @@ footer.ant-layout-footer {
   color: #555555;
   font-size: 2.3vh;
   letter-spacing: 2px;
-  margin-left: 15vh;
+  margin-left: 17vh;
   margin-top: 6.5vh;
   text-align: center;
   padding-top: 0.5vh;
@@ -649,4 +582,366 @@ footer.ant-layout-footer {
   display: flex;
   justify-content: flex-end;
 
+}
+.mobileLogo {
+  display: none;
+}
+.mobileBuns {
+  display: none;
+}
+.bunsBoxmobile {
+  display: none;
+}
+.imgHomeTwo {
+  display: none;
+}
+.badge {
+  color: #fff;
+  background-color: #E0E0E0;
+  margin-right: 4vh;
+  margin-top: 0.5vh;
+}
+@media (max-width: 375px) {
+  /* .ant-layout-header {
+    margin-left: -20px;
+  } */
+  .layout-header {
+    
+    width: 375px;
+  }
+  .container {
+    width: 375px;
+  }
+  .cartimg {
+    width: 4vh;
+    margin-right: -24px
+  } 
+  .accountimg {
+    display: none;
+  }
+  .logo {
+    width: 8vh;
+    margin-left: 13vh;
+    margin-top: 14px;
+  }
+  .headerTextBox {
+    display: none;
+  }
+  /* Home */
+  .imgHome {
+    display: none
+  }
+  .imgHomeTwo {
+    display: block;
+    width: 200px;
+    margin-top: 100px;
+    padding-top: 60px;
+    margin-left: 25%;
+  }
+  .homeContent {
+    width: 375px;
+  }
+  .homeText {
+    font-size: 2px;
+    letter-spacing: 1px;
+    line-height: 8;
+  }
+  .imgYellow {
+    display: none;
+  }
+  .sectionHome {
+    height: auto;
+  }
+  .homeStepTitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+  }
+  .homeStepSummary {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+  .imgHomeBurger {
+    width: 180px;
+  }
+  .step {
+    margin-left: 16%;
+  }
+  .stepFour {
+    margin-left: 0;
+  }
+  .layout-footer {
+    background-color: #fff;
+  }
+  .imgHomeStart {
+    display: none;
+  }
+  .btnStart {
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    margin-top: -600px;
+    margin-left: -65px;
+  }
+  /* burgerBuns */
+  .step-bun-img {
+    display: none;
+  }
+  .mobileBuns {
+    display: block;
+    width: 200px;
+    margin-left: 24%;
+  }
+  .bunsBox {
+    display: none;
+  }
+  .bunsBoxmobile {
+    display: block;
+    width: 375px;
+    margin-top: 110px;
+  }
+  .mobileSelectBuns {
+    width: 200px;
+    margin-left: 20%;
+  }
+  .mobileBunsBottom {
+    margin-top: -12px;
+  }
+  .totalPriceBox {
+    width: 150px;
+  }
+  .selectSection {
+    width: 375px;
+  }
+  .mobileNone {
+    display: none;
+    width: 0;
+  }
+  .btnNextBox {
+    width: 100px;
+    margin-left: 50%;
+   margin-top: 100px;
+  }
+  .burgerBun-btn {
+    width: 160px;
+    height: 60px;
+    margin-left: 25%;
+  }
+  .burgerBun-btn-first {
+    margin-top: 35px;
+   
+  }
+  .selectBurgerBun {
+    font-size: 18px;
+    letter-spacing: 1px;
+    height: 38px;
+  }
+  .linemobile {
+    width: 20px;
+  }
+  .line {
+    margin-top: 45px;
+  }
+  .selectPrice {
+    font-size: 10px;
+    margin-top: 47px;
+    margin-left: 7px;
+  }
+  .totalPriceBox {
+    width: 375px;
+  }
+  .totalPrice {
+    width: 200px;
+    font-size: 18px;
+    margin-left: 33%;
+  }
+  .selectBurgerBun:focus {
+    font-size: 18px;
+    letter-spacing: 1px;
+    height: 38px;
+    width: 200px;
+    height: 40px;
+  }
+  /* meat */
+  .meat-bunBottom-mobile {
+    width: 200px;
+    margin-top: 40px;
+    margin-left: 42%;
+  }
+  .meat-mobile {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 42%;
+  }
+  .meat-bunTop-mobile {
+    width: 200px;
+    margin-top: -30px;
+    margin-left: 42%;
+  }
+  .shrimp-btn {
+   padding-top: 150px;
+  }
+  .bacon-btn {
+    margin-top: 50px;
+  }
+  .beef-btn {
+    margin-top: -10px;
+  }
+  .btnNextBox-meat {
+    display: flex;
+    width: 375px;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  .btnNext-meat {
+    width: 100px;
+  }
+  .ingredients-bunBottom-mobile {
+    width: 200px;
+    margin-top: 80px;
+    margin-left: 42%;
+  }
+  .ingredients-bunTop-mobile {
+    width: 200px;
+    margin-top: -30px;
+    margin-left: 42%;
+  }
+  .ingredients-meat-mobile {
+    width: 200px;
+    margin-left: 42%;
+    margin-top: 55px;
+  }
+  .ingredients-0-mobile {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 30px;
+  }
+  .ingredients-1-mobile {
+    width: 60%;
+    margin-left: 20%;
+    
+  }
+  .ingredients-3-mobile {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+  }
+  label.ant-checkbox-wrapper.ant-checkbox-group-item {
+    width: 200px;
+    margin-top: 15px;
+    height: 42px;
+    padding-left: 25px;
+    margin-left: 15%;
+  }
+  .ant-checkbox + span {
+    margin-left: 5px;
+    font-size: 18px;
+  }
+  .priceMove {
+    margin-left: 70%;
+    margin-top: -215px;
+  }
+  .priceMoveDown {
+    margin-top: 35px;
+  }
+  .badge {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  sup .ant-scroll-number {
+    margin-right: -12px;
+  }
+  .complete-bottom-section-line {
+    display: none;
+  }
+  .complete-burger {
+    width: 200px;
+  }
+  .onion {
+    margin-top: 120px;
+    margin-left: 22%;
+  }
+  .vegetable {
+    margin-top: 140px;
+    margin-left: 22%;
+  }
+  .cheese {
+    margin-top: 160px;
+    margin-left: 22%;
+  }
+  .meat {
+    margin-top: 180px;
+    margin-left: 22%;
+  }
+  .bunBottom {
+    margin-top: 200px;
+    margin-left: 22%;
+  }
+  .bunTop {
+    margin-left: 22%;
+  }
+  .complete-bottom-section-button {
+    width: 230px;
+    display: block;
+    
+  }
+  .complete-bottom-section-oneMore {
+    margin-top: -90px;
+    margin-left: 40px;
+  }
+  .completePrice {
+    margin-left: 16%;
+  }
+  .complete-bottom-section-checkOut {
+    margin-top: -20px;
+    margin-left: -5%;
+  }
+  .cart-item-description {
+    display: none;
+  }
+  .cart-item-bgc {
+    width: 350px;
+    margin-left: 8%;
+  }
+  .cart-title-description {
+    display: none;
+  }
+  .cart-burger-bgc {
+    margin-left: 4%;
+  }
+  .cart-title-box {
+    width: 375px;
+  }
+  .cart-qty {
+    width: 50px;
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  .cart-title {
+    font-size: 16px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .cart-title-price {
+    margin-left: 25px;
+  }
+  .cart-title-quantity {
+    margin-left: 170px;
+  }
+  .cart-total-price {
+    width: 375px;
+  }
+  .cart-price {
+    width: 100px;
+    margin-left: 20px;
+  }
+  .cart-total-price {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .startCheckOut {
+    width: 200px;
+  }
 }

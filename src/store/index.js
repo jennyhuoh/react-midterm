@@ -1,7 +1,9 @@
 import { createContext, useReducer } from 'react';
 import useReducerWithThunk from 'use-reducer-thunk';
+
 import { SET_PAGE_CONTENT, SET_PAGE_TOTAL, SET_ITEM_NUM, SET_ITEM_BUNS, SET_ITEM_MEAT, SET_ITEM_PRICE } from '../utils/constants';
 import burgerBuns from '../json/burgerBuns.json';
+
 
 export const StoreContext = createContext();
 

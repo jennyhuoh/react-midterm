@@ -11,6 +11,7 @@ import totalLabel from '../images/img-total.png';
 import oneMore from '../images/btn-onemore.png';
 import checkOut from '../images/btn-checkout.png';
 import lineTwo from '../images/Line2.png';
+import mobileComplete from '../images/complete.png';
 import { SET_ITEM_NUM, SET_PAGE_TOTAL } from '../utils/constants';
 
 function CompleteDetail() {
@@ -26,7 +27,35 @@ function CompleteDetail() {
             <div className="step-bun">
                 <img className="step-bun-img" src={completeimg} />
             </div>
-            <Row className="selectSection">
+            <img className="mobileBuns" src={mobileComplete} />
+            <div className="bunBoxmobile">
+                <div className="posa bunBottom">
+                        <img className="select-classic-buns complete-burger" src={burgerBuns[0].bottomImage} />
+                    </div>
+                    <div className="posa meat">
+                        <img className="select-classic-buns complete-burger" src={meat[0].image} />
+                    </div>
+                    <div className="posa cheese">
+                        <img className="select-classic-buns complete-burger" src={ingredients[0].image} />
+                    </div>
+                    <div className="posa vegetable">
+                        <img className="select-classic-buns complete-burger" src={ingredients[1].image} />
+                    </div>
+                    <div className="posa onion">
+                        <img className="select-classic-buns complete-burger" src={ingredients[3].image} />
+                    </div>
+                    
+                    <div className="posa bunTop">
+                        <img className="select-classic-buns complete-burger" src={burgerBuns[0].image} />
+                    </div>
+                    <div style={{height: '125px'}}></div>
+                    <div className="completePrice">
+                        <span className="totalLabel"><img src={totalLabel} className="totalLabel-img" /></span>
+                        <span className="completePrice-total"> NT {state.total}</span> 
+                    </div>
+                    
+            </div>
+            <Row className="selectSection mobileNone">
                 <Col span={15}>
                     <div className="posa posa-complete bunBottom">
                         <img className="select-classic-buns" src={burgerBuns[0].bottomImage} />

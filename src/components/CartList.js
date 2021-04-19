@@ -13,7 +13,7 @@ export default function CartList() {
         if (state.itemPrice[0] !== 0) {
             return(
                 <div>
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className="cart-title-box">
                         <div className="cart-title cart-title-description">Description</div>
                         <div className="cart-title cart-title-quantity">Quantity</div>
                         <div className="cart-title cart-title-price">Price</div>
