@@ -13,6 +13,10 @@ export default function Header() {
     const { dispatch } = useContext(StoreContext);
     const onClickBurger = () => {
         setPageContent(dispatch, getJSON("/burgerBuns"))
+        // dispatch({
+        //     type: SET_PAGE_TOTAL,
+        //     payload: 0
+        // });
     }
 
     return (
