@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.80fdac07.chunk.css",
+    "main.js": "/static/js/main.a082901e.chunk.js",
+    "main.js.map": "/static/js/main.a082901e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5023b741.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5023b741.js.map",
+    "static/css/2.558413a2.chunk.css": "/static/css/2.558413a2.chunk.css",
+    "static/js/2.61471793.chunk.js": "/static/js/2.61471793.chunk.js",
+    "static/js/2.61471793.chunk.js.map": "/static/js/2.61471793.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/2.558413a2.chunk.css.map": "/static/css/2.558413a2.chunk.css.map",
+    "static/css/main.80fdac07.chunk.css.map": "/static/css/main.80fdac07.chunk.css.map",
+    "static/js/2.61471793.chunk.js.LICENSE.txt": "/static/js/2.61471793.chunk.js.LICENSE.txt",
+    "static/media/burger-logo.06fa49a4.png": "/static/media/burger-logo.06fa49a4.png",
+    "static/media/img-Lstart.8d52cde1.png": "/static/media/img-Lstart.8d52cde1.png",
+    "static/media/img-Rstart.cc0d99c9.png": "/static/media/img-Rstart.cc0d99c9.png",
+    "static/media/img-home.0502fa85.png": "/static/media/img-home.0502fa85.png",
+    "static/media/img-home2.7c6c0d80.png": "/static/media/img-home2.7c6c0d80.png",
+    "static/media/img-step1-burger.a20376ae.png": "/static/media/img-step1-burger.a20376ae.png",
+    "static/media/img-step1.ca5ccdcc.png": "/static/media/img-step1.ca5ccdcc.png",
+    "static/media/img-step2-burger.167f40f5.png": "/static/media/img-step2-burger.167f40f5.png",
+    "static/media/img-step2.c0697dc3.png": "/static/media/img-step2.c0697dc3.png",
+    "static/media/img-step3-burger.55a9fbc5.png": "/static/media/img-step3-burger.55a9fbc5.png",
+    "static/media/img-step3.9c8fcfa5.png": "/static/media/img-step3.9c8fcfa5.png",
+    "static/media/img-step4-burger.1d49b0c2.png": "/static/media/img-step4-burger.1d49b0c2.png",
+    "static/media/img-top-buns.a6dbeb50.png": "/static/media/img-top-buns.a6dbeb50.png",
+    "static/media/img-top-complete.2105eeca.png": "/static/media/img-top-complete.2105eeca.png",
+    "static/media/img-top-ingredient.c5c7885b.png": "/static/media/img-top-ingredient.c5c7885b.png",
+    "static/media/img-top-meat.ccb390cd.png": "/static/media/img-top-meat.ccb390cd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5023b741.js",
+    "static/css/2.558413a2.chunk.css",
+    "static/js/2.61471793.chunk.js",
+    "static/css/main.80fdac07.chunk.css",
+    "static/js/main.a082901e.chunk.js"
+  ]
+}
