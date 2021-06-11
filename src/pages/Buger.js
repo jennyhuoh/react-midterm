@@ -22,6 +22,9 @@ function Burger() {
                 <Content className="layout-content">
                     <BugerDetail />
                 </Content>
+                <Footer className="layout-footer">
+                    <AppFooter />
+                </Footer>
             </Layout>         
         </Layout>
     );

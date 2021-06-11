@@ -1,8 +1,24 @@
 import { createContext, useReducer } from 'react';
 import useReducerWithThunk from 'use-reducer-thunk';
 
-import { SET_PAGE_CONTENT, SET_PAGE_TOTAL, SET_ITEM_NUM, SET_ITEM_BUNS, SET_ITEM_MEAT, SET_ITEM_PRICE } from '../utils/constants';
+import { 
+    SET_PAGE_CONTENT,
+    SET_PAGE_TOTAL, 
+    SET_ITEM_NUM, 
+    SET_ITEM_BUNS, 
+    SET_ITEM_MEAT, 
+    SET_ITEM_PRICE,
+    ADD_INGREDIENT1,
+    REMOVE_INGREDIENT1,
+    ADD_INGREDIENT2,
+    REMOVE_INGREDIENT2,
+    ADD_INGREDIENT3,
+    REMOVE_INGREDIENT3,
+    ADD_INGREDIENT4,
+    REMOVE_INGREDIENT4,
+ } from '../utils/constants';
 import burgerBuns from '../json/burgerBuns.json';
+import ingredient from '../json/ingredient.json';
 
 
 export const StoreContext = createContext();
@@ -13,7 +29,16 @@ const initialState = {
     itemBuns: [],
     itemMeat: [],
     itemPrice: [],
+    // ingredients:{
+    //     ingredient
+    // }
+    num1: 2,
+    num2: 2,
+    num3: 2,
+    num4: 2
 }
+let itemBuns = {};
+let itemMeat = {};
 
 function reducer(state, action) {
     switch(action.type) {
@@ -46,6 +71,46 @@ function reducer(state, action) {
             return{
                 ...state,
                 itemPrice: action.payload,
+            };
+        case ADD_INGREDIENT1:
+            return{
+                ...state,
+                num1:action.payload
+            };
+        case REMOVE_INGREDIENT1:
+            return{
+                ...state,
+                num1:action.payload
+            };
+        case ADD_INGREDIENT2:
+            return{
+                ...state,
+                num2:action.payload
+            };
+        case REMOVE_INGREDIENT2:
+            return{
+                ...state,
+                num2:action.payload
+            };
+        case ADD_INGREDIENT3:
+            return{
+                ...state,
+                num3:action.payload
+            };
+        case REMOVE_INGREDIENT3:
+            return{
+                ...state,
+                num3:action.payload
+            };
+        case ADD_INGREDIENT4:
+            return{
+                ...state,
+                num4:action.payload
+            };
+        case REMOVE_INGREDIENT4:
+            return{
+                ...state,
+                num4:action.payload
             };
         default:
             return state;

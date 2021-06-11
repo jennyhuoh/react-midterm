@@ -1,6 +1,6 @@
 [
     {
-        "id": "i1",
+        "id": "ii1",
         "category": "Ingredient",
         "name": "Cheese",
         "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/cheese.png",
@@ -9,7 +9,7 @@
         "countInStock": 2
     },
     {
-        "id": "i2",
+        "id": "ii2",
         "category": "Ingredient",
         "name": "Vegetable",
         "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/vegetable.png",
@@ -18,7 +18,7 @@
         "countInStock": 2
     },
     {
-        "id": "i3",
+        "id": "ii3",
         "category": "Ingredient",
         "name": "Tomato",
         "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/tomato.png",
@@ -27,7 +27,7 @@
         "countInStock": 2
     },
     {
-        "id": "i4",
+        "id": "ii4",
         "category": "Ingredient",
         "name": "Onion",
         "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/onion.png",

@@ -16,9 +16,9 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/shoppingCart" component={ShoppingCart} />
           <Route exact path="/burger" component={Burger} />
-          <Route exact path="/meat" component={Meat} />
-          <Route exact path="/ingredients" component={Ingredients} />
-          <Route exact path="/complete" component={Complete} />
+          {/* <Route exact path="/meat" component={Meat} />
+          <Route exact path="/ingredients" component={Ingredients} /> */}
+          {/* <Route exact path="/complete" component={Complete} /> */}
         </Switch>
       </BrowserRouter>
     </StoreProvider>

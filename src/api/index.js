@@ -1,32 +1,36 @@
 import burgerBuns from '../json/burgerBuns.json';
 import ingredient from '../json/ingredient.json';
 import meat from '../json/meat.json';
-// import firebase from 'firebase/app';
-// import 'firebase/firestore';
-// import 'firebase/auth';
+import materials from '../json/materials.json';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 //initialize firebase
-// var firebaseConfig = {
-//     apiKey: "AIzaSyDIpVpSvBP8JU_bLOEBeLukkQL0FN7vcro",
-//     authDomain: "hamburger-95aaf.firebaseapp.com",
-//     projectId: "hamburger-95aaf",
-//     storageBucket: "hamburger-95aaf.appspot.com",
-//     messagingSenderId: "414489541862",
-//     appId: "1:414489541862:web:feb62c94397c48acd28f27"
-//   };
-//   firebase.initializeApp(firebaseConfig);
+var firebaseConfig = {
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APPID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 export const getJSON = (url) => {
     switch (url) {
         case "/burger":
-            return burgerBuns;
-        case "/meat":
-            return meat;
-        case "/ingredients":
-            return ingredient;
+            return materials;
+        // case "/meat":
+        //     return meat;
+        // case "/ingredients":
+        //     return ingredient;
     }
 }
 
-// export const authenticateAnonymousely = () => {
-//     return firebase.auth().signInAnonymously;
-// }
+export const authenticateAnonymousely = () => {
+     return firebase.auth().signInAnonymously;
+ }

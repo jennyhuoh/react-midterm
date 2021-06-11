@@ -60,7 +60,14 @@
   width: 100vw;
   height: 15vh;
 }
-
+.footerContent {
+  font-size: 24px;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 5;
+}
 .logo {
   width: 12vh;
 }
@@ -214,6 +221,39 @@ h1.headerText {
 }
 
 /* burger buns */
+.burgerTitle {
+  font-size: 28px;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  color: #707070;
+  margin-top: 140px;
+  text-align: center;
+}
+.rightBox {
+  background-color: #FFF9E6;
+  height: 68vh;
+  padding-left: 50px;
+  width: 90%;
+  overflow: auto;
+  border-radius: 60px;
+}
+.bun-title {
+  font-size: 30px;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  align-items: center;
+}
+.yellowDot {
+  width: 20px;
+  align-items: center;
+}
+.rightBoxBun {
+  padding-top: 30px;
+}
+.rightBoxMeat {
+  margin-top: 40px;
+}
+.rightBoxIngredients {
+  padding-bottom: 60px;
+}
 .select-classic-buns {
   align-items: center;
   text-align: center;
@@ -227,15 +267,77 @@ h1.headerText {
   margin-top: 7.5vh;
 }
 
-.selectBurgerBun {
-  margin-top: 36px;
-  width: 38vh;
-  height: 6.5vh;
+.ant-radio-button-wrapper {
+  width: 31vh;
+  height: 6.7vh;
   font-family: "Adobe Clean Regular", sans-serif;
   color: #555555;
-  font-size: 3vh;
-  letter-spacing: 3px;
+  font-size: 24px;
+  letter-spacing: 2px;
   background-color: #E0E0E0;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 2;
+  border-radius: 30px;
+}
+.ant-radio-button-wrapper:hover {
+  color: #555555;
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  margin-top: 30px;
+  width: 31vh;
+  height: 6.7vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #FFE283;
+  border-color: #FFE283;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  margin-top: 30px;
+  width: 31vh;
+  height: 6.7vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #FFE283;
+  border-color: #FFE283;
+}
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  border-right-color: #FFE283;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+  background-color: #FFE283;
+}
+.ant-radio-button-wrapper:not(:first-child)::before {
+  background-color: #FFF9E6;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+  background-color: #FFF9E6;
+}
+.selectBurgerBun {
+  margin-top: 30px;
+  width: 31vh;
+  height: 6.7vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #E0E0E0;
+}
+.rightBoxBun-select {
+  width: 31vh;
+  margin-left: 34px;
+}
+.ant-radio-button-wrapper:first-child {
+  border-radius: 30px;
+}
+.ant-radio-button-wrapper:last-child {
+  border-radius: 30px;
 }
 .selectBurgerBun:hover {
   color: #555555;
@@ -243,16 +345,51 @@ h1.headerText {
   border-color: #E0E0E0;
 }
 .selectBurgerBun:focus {  
-  margin-top: 36px;
-  width: 38vh;
-  height: 6.5vh;
+  margin-top: 30px;
+  width: 31vh;
+  height: 6.7vh;
   font-family: "Adobe Clean Regular", sans-serif;
   color: #555555;
-  font-size: 3vh;
-  letter-spacing: 3px;
+  font-size: 24px;
+  letter-spacing: 2px;
   background-color: #FFE283;
   border-color: #FFE283;
 }
+.iname_yellow {
+  width: 31vh;
+  height: 6.7vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #FFE283;
+  border-radius: 30px;
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 34px;
+  line-height: 2;
+}
+.iname_gray {
+  width: 31vh;
+  height: 6.7vh;
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #E0E0E0;
+  border-radius: 30px;
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 34px;
+  line-height: 2;
+}
+.ingredients-items {
+  display: flex;
+}
+.selectPrice-ingredients {
+  margin-left: 40px;
+}
+
 .step-bun-img {
   width: 150vh;
   align-items: center;
@@ -269,8 +406,8 @@ h1.headerText {
   margin-top: 2vh;
 }
 .selectSection-selector {
-  padding-left: 5vh;
   margin-top: 6vh;
+  height: 90vh
 }
 .selectSection-selector-right {
   display: flex;
@@ -280,11 +417,11 @@ h1.headerText {
   color: #555555;
   font-size: 2.3vh;
   letter-spacing: 3px;
-  margin-top: 6.5vh;;
-  margin-left: 2vh;
+  margin-top: 5.8vh;
 }
 .burgerBun-btn {
   display: flex;
+  padding-left: 38px;
 }
 .totalPrice {
   font-family: "Adobe Clean Regular", sans-serif;
@@ -305,9 +442,74 @@ h1.headerText {
   margin-top: 17vh;
 }
 .line {
-  margin-top: 6.5vh;
+  margin-top: 5.6vh;
+  width: 10px;
 }
-
+.lineBox {
+  margin-top: 40px;
+  align-items: center;
+}
+.lineBox2 {
+  margin-top: 55px;
+  align-items: center;
+}
+.minusBg {
+  margin-top: 45px;
+  margin-left: 20px;
+  background-color: #E0E0E0;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.minus {
+  width: 40%;
+  height: 10%;
+  background-color: #707070;
+  border-radius: 20px;
+}
+.plus {
+  width: 10%;
+  height: 45%;
+  background-color: #707070;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: 1px;
+}
+.plusBg {
+  margin-top: 45px;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background-color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.ingredientNum {
+  margin-top: 45px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 2;
+  border-color: #E0E0E0;
+}
+.ingredientNumB {
+  margin-top: 45px;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  text-align: center;
+  line-height: 2;
+  border-color: #E0E0E0;
+}
 /* meat */
 .btnNextBox-meat {
   width: 76vh;
