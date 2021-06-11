@@ -3,54 +3,65 @@
         "id": "bb1",
         "name": "Classic Buns",
         "price": 50,
-        "countInStock": 1
+        "countInStock": 1,
+        "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-classic-top.png",
+        "bottomImage": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-classic-bottom.png"
     },
     {
         "id": "bb2",
         "name": "Black Buns",
         "price": 60,
-        "countInStock": 1
+        "countInStock": 1,
+        "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-black-top.png",
+        "bottomImage": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bun-black-bottom.png"
     },
     {
                 "id": "mm1",
-                "name": "Fried Shrimp",
-                "price": 80,
+                "name": "Bacon",
+                "price": 70,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/bacon.png",
                 "countInStock": 1
             },
             {
                 "id": "mm2",
-                "name": "Bacon",
-                "price": 70,
+                "name": "Fried Shrimp",
+                "price": 80,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/friedshrimp.png",
                 "countInStock": 1
             },
             {
                 "id": "mm3",
                 "name": "Beef",
                 "price": 90,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/beef.png",
                 "countInStock": 1
     },
     {
                 "id": "ii1",
                 "name": "Cheese",
                 "price": 15,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/cheese.png",
                 "countInStock": 2
             },
             {
                 "id": "ii2",
                 "name": "Vegetable",
                 "price": 15,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/vegetable.png",
                 "countInStock": 2
             },
             {
                 "id": "ii3",
                 "name": "Tomato",
                 "price": 15,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/tomato.png",
                 "countInStock": 2
             },
             {
                 "id": "ii4",
                 "name": "Onion",
                 "price": 15,
+                "image": "https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/onion.png",
                 "countInStock": 2
     }
 ]

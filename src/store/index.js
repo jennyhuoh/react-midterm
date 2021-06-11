@@ -16,6 +16,8 @@ import {
     REMOVE_INGREDIENT3,
     ADD_INGREDIENT4,
     REMOVE_INGREDIENT4,
+    CHANGE_BUNS,
+    CHANGE_MEAT
  } from '../utils/constants';
 import burgerBuns from '../json/burgerBuns.json';
 import ingredient from '../json/ingredient.json';
@@ -24,7 +26,7 @@ import ingredient from '../json/ingredient.json';
 export const StoreContext = createContext();
 
 const initialState = {
-    total: 0,
+    total: 240,
     itemNum: 0,
     itemBuns: [],
     itemMeat: [],
@@ -35,7 +37,9 @@ const initialState = {
     num1: 2,
     num2: 2,
     num3: 2,
-    num4: 2
+    num4: 2,
+    bun: "black",
+    meat: "beef"
 }
 let itemBuns = {};
 let itemMeat = {};
@@ -111,6 +115,16 @@ function reducer(state, action) {
             return{
                 ...state,
                 num4:action.payload
+            };
+        case CHANGE_BUNS: 
+            return {
+                ...state,
+                bun: action.payload
+            };
+        case CHANGE_MEAT: 
+            return {
+                ...state,
+                meat: action.payload
             };
         default:
             return state;

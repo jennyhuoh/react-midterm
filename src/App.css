@@ -429,11 +429,21 @@ h1.headerText {
   font-size: 2.7vh;
   letter-spacing: 3px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+
 }
 .totalPriceBox {
-  width: 48vh;
-  margin-top: 2vh;
+  width: 100%;
+  margin-top: 55vh;
+}
+.btn-checkout-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.btn-checkout {
+  width: 210px;
 }
 .btnNextBox {
   width: 76vh;
@@ -579,19 +589,22 @@ label.ant-checkbox-wrapper.ant-checkbox-group-item {
   position: absolute;
 }
 .bunBottom {
-  margin-top: 33vh;
+  margin-top: 36vh;
+}
+.tomato {
+  margin-top: 30vh;
 }
 .meat {
-  margin-top: 29vh;
+  margin-top: 27vh;
 }
 .cheese {
-  margin-top: 25vh;
+  margin-top: 23vh;
 }
 .vegetable {
-  margin-top: 21vh;
+  margin-top: 19vh;
 }
 .onion {
-  margin-top: 17vh;
+  margin-top: 15vh;
 }
 .leftCol {
   height: 60.5vh;
