@@ -21,7 +21,8 @@ import { SET_PAGE_TOTAL,
          ADD_INGREDIENT4,
          REMOVE_INGREDIENT4,
          CHANGE_BUNS,
-         CHANGE_MEAT
+         CHANGE_MEAT,
+         SET_MEAT_TOTAL
 } from '../utils/constants';
 import ButtonGroup from 'antd/lib/button/button-group';
 import mobileBuns from '../images/bun.png';
@@ -242,19 +243,11 @@ function BurgerDetail() {
             dispatch({
                 type: CHANGE_MEAT,
                 payload: "shrimp"
+            });
+            dispatch({
+                type: SET_MEAT_TOTAL,
+                payload: 80
             })
-            if(state.meat === "bacon") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total - 10
-                })
-            }
-            if(state.meat === "beef") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total + 10
-                })
-            }
             
         }
         if(valueMeat === materials[3].price) {
@@ -262,36 +255,20 @@ function BurgerDetail() {
                 type: CHANGE_MEAT,
                 payload: "bacon"
             });
-            if(state.meat === "shrimp") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total + 10
-                })
-            }
-            if(state.meat === "beef") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total - 10
-                })
-            }
+            dispatch({
+                type: SET_MEAT_TOTAL,
+                payload: 90
+            })
         }
         if(valueMeat === materials[4].price) {
             dispatch({
                 type: CHANGE_MEAT,
                 payload: "beef"
             });
-            if(state.meat === "shrimp") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total + 20
-                })
-            }
-            if(state.meat === "bacon") {
-                dispatch({
-                    type: SET_PAGE_TOTAL,
-                    payload: state.total = state.total + 20
-                })
-            }
+            dispatch({
+                type: SET_MEAT_TOTAL,
+                payload: 70
+            })
         }
 
     }
@@ -421,7 +398,7 @@ function BurgerDetail() {
                     </div>
                     <div className="totalPriceBox">
                         <div className="totalPrice">   
-                            TOTAL: NT {state.total}
+                            TOTAL: NT {state.total + state.meatTotal}
                         </div>
                     </div>
                     <div className="btn-checkout-box">
