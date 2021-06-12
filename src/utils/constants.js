@@ -16,3 +16,5 @@ export const REMOVE_INGREDIENT4 = 'REMOVE_INGREDIENT4';
 export const CHANGE_BUNS = 'CHANGE_BUNS';
 export const CHANGE_MEAT = 'CHANGE_MEAT';
 export const SET_MEAT_TOTAL = 'SET_MEAT_TOTAL';
+export const ADD_CART_BUN = 'ADD_CART_BUN';
+export const ADD_CART_MEAT = 'ADD_CART_MEAT';

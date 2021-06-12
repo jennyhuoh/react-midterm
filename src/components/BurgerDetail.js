@@ -22,7 +22,9 @@ import { SET_PAGE_TOTAL,
          REMOVE_INGREDIENT4,
          CHANGE_BUNS,
          CHANGE_MEAT,
-         SET_MEAT_TOTAL
+         SET_MEAT_TOTAL,
+         ADD_CART_BUN,
+         ADD_CART_MEAT
 } from '../utils/constants';
 import ButtonGroup from 'antd/lib/button/button-group';
 import mobileBuns from '../images/bun.png';
@@ -223,6 +225,10 @@ function BurgerDetail() {
             dispatch({
                 type: SET_PAGE_TOTAL,
                 payload: state.total = state.total + 10
+            });
+            dispatch({
+                type: ADD_CART_BUN,
+                payload: state.cartBun = materials[1].name
             })
         }
         if(value === materials[1].price) {
@@ -233,6 +239,10 @@ function BurgerDetail() {
             dispatch({
                 type: SET_PAGE_TOTAL,
                 payload: state.total = state.total - 10
+            });
+            dispatch({
+                type: ADD_CART_BUN,
+                payload: state.cartBun = materials[0].name
             })
         }
     }
@@ -247,6 +257,10 @@ function BurgerDetail() {
             dispatch({
                 type: SET_MEAT_TOTAL,
                 payload: 80
+            });
+            dispatch({
+                type: ADD_CART_MEAT,
+                payload: state.cartMeat = materials[3].name
             })
             
         }
@@ -259,6 +273,10 @@ function BurgerDetail() {
                 type: SET_MEAT_TOTAL,
                 payload: 90
             })
+            dispatch({
+                type: ADD_CART_MEAT,
+                payload: state.cartMeat = materials[4].name
+            })
         }
         if(valueMeat === materials[4].price) {
             dispatch({
@@ -269,32 +287,25 @@ function BurgerDetail() {
                 type: SET_MEAT_TOTAL,
                 payload: 70
             })
+            dispatch({
+                type: ADD_CART_MEAT,
+                payload: state.cartMeat = materials[2].name
+            })
         }
-
     }
-   
-    // const onClickBurgerBuns0 = () => {
-    //     const bunsTemp0 = state.itemBuns.concat(burgerBuns[0].name)
-    //     dispatch({
-    //         type: SET_PAGE_TOTAL,
-    //         payload: 50
-    //     });
-    //     dispatch({
-    //         type: SET_ITEM_BUNS,
-    //         payload: bunsTemp0
-    //     });
-    // }
-    // const onClickBurgerBuns1 = () => {
-    //     const bunsTemp1 = state.itemBuns.concat(burgerBuns[0].name)
-    //     dispatch({
-    //         type: SET_PAGE_TOTAL,
-    //         payload: 60
-    //     });
-    //     dispatch({
-    //         type: SET_ITEM_BUNS,
-    //         payload: bunsTemp1
-    //     });
-    // }
+    const addToCart = () => {
+        // dispatch({
+        //     type: ADD_TO_CART,
+        //     payload: {
+        //         cartBun: materials[0].name,
+        //         cartMeat: materials[2].name,
+        //         cartCheese: materials[5].name,
+        //         cartVegetable: materials[6].name,
+        //         cartTomato: materials[7].name,
+        //         cartOnion: materials[8].name
+        //     }
+        // })
+    }
     const bunsOptions = [
         {label: materials[0].name, value: materials[0].price},
         {label: materials[1].name, value: materials[1].price}
@@ -401,7 +412,7 @@ function BurgerDetail() {
                             TOTAL: NT {state.total + state.meatTotal}
                         </div>
                     </div>
-                    <div className="btn-checkout-box">
+                    <div className="btn-checkout-box" onChange={addToCart}>
                         <Link to="/shoppingCart">
                             <img src={checkOut} className="btn-checkout" />
                         </Link>

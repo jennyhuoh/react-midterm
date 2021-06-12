@@ -5,12 +5,10 @@ import { SET_ITEM_BUNS, SET_ITEM_MEAT } from '../utils/constants';
 import meat from '../json/meat.json';
 import burgerBuns from '../json/burgerBuns.json';
 import ingredients from '../json/ingredient.json';
+import materials from '../json/materials.json';
 
 export default function CartList() {
     const {state} = useContext(StoreContext);
-    
-    // for(let i = 0; i < state.itemMeat.length+1; i++) {
-        if (state.itemPrice[0] !== 0) {
             return(
                 <div>
                     <div style={{display:"flex"}} className="cart-title-box">
@@ -23,10 +21,10 @@ export default function CartList() {
                         <div className="cart-item-bgc">
                             <div class="cart-burger-bgc">
                                 <div className="posa cart-bunBottom cart-posa">
-                                    <img className="cart-burger" src={burgerBuns[0].bottomImage} />
+                                    <img className="cart-burger" src={materials[0].bottomImage} />
                                 </div>
                                 <div className="posa cart-meat cart-posa">
-                                    <img className="cart-burger" src={meat[0].image} />
+                                    <img className="cart-burger" src={materials[2].image} />
                                 </div>
                                 <div className="posa cart-cheese cart-posa">
                                     <img className="cart-burger" src={ingredients[0].image} />
@@ -39,22 +37,19 @@ export default function CartList() {
                                 </div>
                                 
                                 <div className="posa cart-bunTop cart-posa">
-                                    <img className="cart-burger" src={burgerBuns[0].image} />
+                                    <img className="cart-burger" src={materials[0].image} />
                                 </div>
                             </div>
                             <div className="cart-item-description">
-                                <div className="cart-buns-type">{state.itemBuns[0]}</div>
+                                <div className="cart-buns-type">{state.cartBun}</div>
                                 <div className="cart-dot">・</div>
-                                <div className="cart-meat-type">{state.itemMeat[0]}</div>
+                                <div className="cart-meat-type">{state.cartMeat}</div>
                             </div>
                             <div className="cart-qty">1</div>
-                            <div className="cart-price">NT{state.itemPrice[0]}</div>
+                            <div className="cart-price">NT{state.total + state.meatTotal}</div>
                         </div>    
                     </div>
-                    <div className="cart-total-price">TOTAL: NT {state.itemPrice[0]}</div>
+                    <div className="cart-total-price">TOTAL: NT {state.total + state.meatTotal}</div>
                 </div>
             );
-        }
-        
-    // }
 }
