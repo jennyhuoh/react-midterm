@@ -1,16 +1,20 @@
-import { Link } from 'react-router-dom';
-import { Menu } from 'antd';
+import { Link, useHistory } from 'react-router-dom';
+import { Menu, Modal } from 'antd';
 import { useContext } from 'react';
 import imgLogo from '../images/burger-logo.png';
 import { getJSON } from '../api/index';
 import { setPageContent } from '../actions/index';
 import { StoreContext } from '../store/index';
+import { logoutFromFirebase } from '../actions/index';
+import { LOGIN_STATE } from '../utils/constants';
 import CartSummary from '../components/CartSummary';
 import account from '../images/btn-Xaccount.png';
-
+import login from '../images/btn-login.png';
+import logout from '../images/btn-logout.png';
 
 export default function Header() {
-    const { dispatch } = useContext(StoreContext);
+    const { state, dispatch } = useContext(StoreContext);
+    const history = useHistory();
     const onClickBurger = () => {
         setPageContent(dispatch, getJSON("/burgerBuns"))
         // dispatch({
@@ -18,7 +22,23 @@ export default function Header() {
         //     payload: 0
         // });
     }
-
+    const handleLogout = () => {
+        logoutFromFirebase(dispatch);
+        history.push("/");
+        dispatch({
+            type: LOGIN_STATE,
+            payload: false
+        });
+        Modal.info({
+            // title: 'This is a notification message',
+            content: (
+              <div>
+                已登出！
+              </div>
+            ),
+            onOk() {},
+          });
+     }
     return (
         <header className="headerBgc">
             <div>
@@ -63,7 +83,10 @@ export default function Header() {
             </div>
             <div>
                 <CartSummary />
-                <span><img src={account} className="accountimg"/></span>
+                {
+                    state.login === true?<span onClick={handleLogout} className="wantToLogout"><img src={logout} className="accountimg"/></span>
+                    :state.login === false?<span><Link to="/login"><img src={login} className="accountimg"/></Link></span>:""
+                }
             </div>
             
         </header>

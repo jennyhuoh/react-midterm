@@ -20,6 +20,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  const auth = firebase.auth();
 export const getJSON = (url) => {
     switch (url) {
         case "/burger":
@@ -34,3 +35,19 @@ export const getJSON = (url) => {
 export const authenticateAnonymousely = () => {
      return firebase.auth().signInAnonymously;
  }
+ export const signInWithEmailPassword = async (email, password) => {
+    return await auth.signInWithEmailAndPassword(email, password);
+  }
+  
+  export const registerWithEmailPassword = async (email, password, name) => {
+    await auth.createUserWithEmailAndPassword(email, password);
+    const user = auth.currentUser;
+    await user.updateProfile({
+      displayName: name,
+    })
+    return user;
+  }
+
+  export const signOut = () => {
+    auth.signOut();
+  }

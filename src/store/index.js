@@ -20,7 +20,15 @@ import {
     CHANGE_MEAT,
     SET_MEAT_TOTAL,
     ADD_CART_BUN,
-    ADD_CART_MEAT
+    ADD_CART_MEAT,
+    BEGIN_LOGIN_REQUEST,
+    SUCCESS_LOGIN_REQUEST,
+    FAIL_LOGIN_REQUEST,
+    LOGOUT_REQUEST,
+    BEGIN_REGISTER_REQUEST,
+    SUCCESS_REGISTER_REQUEST,
+    FAIL_REGISTER_REQUEST,
+    LOGIN_STATE
  } from '../utils/constants';
 import burgerBuns from '../json/burgerBuns.json';
 import ingredient from '../json/ingredient.json';
@@ -47,6 +55,19 @@ const initialState = {
     meat: "beef",
     cartBun: materials[0].name,
     cartMeat: materials[2].name,
+    userSignin: {
+        loading: false,
+        userInfo: localStorage.getItem("userInfo")
+          ? JSON.parse(localStorage.getItem("userInfo"))
+          : null,
+        error: "",
+      },
+      userRegister: {
+        loading: false,
+        userInfo: null,
+        error: "",
+      },
+    login: false
 }
 let cartItems = {};
 let itemBuns = {};
@@ -149,6 +170,69 @@ function reducer(state, action) {
                 ...state,
                 cartMeat: action.payload,
             };
+        case BEGIN_LOGIN_REQUEST:
+            return { ...state, userSignin: { ...state.userSignin, loading: true } };
+        case SUCCESS_LOGIN_REQUEST:
+            return {
+                ...state,
+                userSignin: {
+                    ...state.userSignin,
+                    loading: false,
+                    userInfo: action.payload,
+                    error: "",
+                },
+            };
+        case FAIL_LOGIN_REQUEST:
+            return {
+                ...state,
+                userSignin: {
+                    ...state.userSignin,
+                    loading: false,
+                    userInfo: null,
+                    error: action.payload,
+                },
+            };
+        case LOGOUT_REQUEST:
+            cartItems = [];
+            return {
+                ...state,
+                cartItems,
+                userSignin: {
+                    ...state.userSignin,
+                    userInfo: null,
+                },
+            };    
+        case BEGIN_REGISTER_REQUEST:
+            return { ...state, userRegister: { ...state.userRegister, loading: true } };
+        case SUCCESS_REGISTER_REQUEST:
+            return {
+                ...state,
+                userRegister: {
+                    ...state.userRegister,
+                    loading: false,
+                    userInfo: action.payload,
+                    error: "",
+                },
+                userSignin: {
+                    ...state.userSignin,
+                    userInfo: action.payload,
+                }
+            };
+        case FAIL_REGISTER_REQUEST:
+            return {
+                ...state,
+                userRegister: {
+                    ...state.userRegister,
+                    loading: false,
+                    userInfo: null,
+                    error: action.payload,
+                },
+            };
+        case LOGIN_STATE: 
+        return {
+            ...state,
+            login: action.payload
+        }
         default:
             return state;
     }
