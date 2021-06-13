@@ -21,10 +21,13 @@ export default function ContactDetail() {
     return(
         <div>
             <Row>
-                <Col span={14} className="contact-right-box">
-
+                <Col span={12} className="contact-left">
+                    <div className="contact-left-box">
+                        <div className="contact-left-title">Contact us</div>
+                        <div className="contact-left-information-box"></div>
+                    </div>
                 </Col>
-                <Col span={10}></Col>
+                <Col span={12} className="contact-right-box"></Col>
             </Row>
         </div>
     );
