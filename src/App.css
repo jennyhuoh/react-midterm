@@ -71,34 +71,34 @@
   /* text-align: center; */
   margin-left: 140px;
 }
-.ant-input::placeholder {
+.card .ant-input::placeholder {
   color: #555555;
   font-family: "Adobe Clean Regular", sans-serif;
 }
-.site-form-item-icon {
+.card .site-form-item-icon {
   color: #000;
   font-weight: bold;
   padding-right: 7px;
 }
-.ant-input-affix-wrapper {
+.card .ant-input-affix-wrapper {
   border: 1px solid #707070;
   height: 40px;
 }
-.ant-btn-primary {
+.card .ant-btn-primary {
   background-color: #FDDC70;
   border-color: #FDDC70; 
   width: 280px;
   height: 40px;
   font-family: "Adobe Clean Regular", sans-serif;
 }
-.ant-btn-primary:hover {
+.card .ant-btn-primary:hover {
   background-color: #FDDC70;
   border-color: #FDDC70; 
   width: 280px;
   height: 40px;
   font-family: "Adobe Clean Regular", sans-serif;
 }
-.ant-btn-primary:focus {
+.card .ant-btn-primary:focus {
   background-color: #FDDC70;
   border-color: #FDDC70; 
   width: 280px;
@@ -142,6 +142,10 @@
   color: #F1C039;
   font-size: 16px;
 }
+/* Contact */
+/* .contact-right-box {
+  background-image: url();
+} */
 /* Header */
 .wantToLogout {
   cursor: pointer;

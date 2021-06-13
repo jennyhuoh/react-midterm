@@ -61,7 +61,7 @@ export default function CartHeader() {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="3">
-                        <Link to="/" className="headerTextLink">
+                        <Link to="/contact" className="headerTextLink">
                             <div className="headerTextContact">
                                 <div className="contactLine">
                                     <h1 className="headerText">CONTACT</h1>
