@@ -235,6 +235,11 @@
   width: 100vw;
   height: 15vh;
 }
+.layout-footer-home {
+  background-color: #fff;
+  width: 100vw;
+  height: 15vh;
+}
 .footerContent {
   font-size: 24px;
   font-family: "Adobe Clean Regular", sans-serif;
@@ -354,8 +359,10 @@ h1.headerText {
 }
 
 .imgYellow {
-  width: 29vw;
-  height: 85vh;
+  width: 100%;
+  /* height: 50%; */
+  padding-top: 8vh;
+  /* padding-left: 1vh; */
 }
 
 .stepFour {
@@ -404,10 +411,17 @@ h1.headerText {
 }
 
 .btnStart {
-  width: 35vh;
-  /* padding-top: 9vh; */
+  width: 30vh;
 }
-
+.btnstart-gray {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.homeSec2Bg {
+  background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/img-homeBg2.png);
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
 /* burger buns */
 .burgerTitle {
   font-size: 28px;

@@ -21,7 +21,7 @@ export default function Introduction() {
                     <img src={btnCustomize} className="btnStart" />
                 </Link>
             </div>
-            <div>
+            <div className="homeSec2Bg">
                 <Row>
                     <Col span={6}>
                         <img src={imgStepOne} class="imgYellow" />
@@ -36,11 +36,9 @@ export default function Introduction() {
                         <img src={imgStepFour} class="imgYellow" />
                     </Col>
                 </Row>
-            </div>
-            <div>
-                        <Link to="/burger">
-                            <img src={btnStart} className="btnStart" />
-                        </Link>
+                <Link to="/burger" className="home-start-box">
+                    <img src={btnStart} className="btnStart btnstart-gray" />
+                </Link>
             </div>
         </div>
     );

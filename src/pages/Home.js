@@ -16,7 +16,7 @@ function Home() {
                 <Content>
                     <Introduction />
                 </Content>
-                <Footer className="layout-footer">
+                <Footer className="layout-footer-home">
                     <AppFooter />
                 </Footer>
             </Layout>
