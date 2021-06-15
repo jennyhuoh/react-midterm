@@ -1,6 +1,3 @@
-import burgerBuns from '../json/burgerBuns.json';
-import ingredient from '../json/ingredient.json';
-import meat from '../json/meat.json';
 import materials from '../json/materials.json';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -25,10 +22,6 @@ export const getJSON = (url) => {
     switch (url) {
         case "/burger":
             return materials;
-        // case "/meat":
-        //     return meat;
-        // case "/ingredients":
-        //     return ingredient;
     }
 }
 
@@ -51,3 +44,6 @@ export const authenticateAnonymousely = () => {
   export const signOut = () => {
     auth.signOut();
   }
+
+var db = firebase.firestore();
+ export {db};

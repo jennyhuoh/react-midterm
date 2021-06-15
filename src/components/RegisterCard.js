@@ -23,7 +23,7 @@ export default function RegisterCard() {
    const onFinish = async (values) => {
      console.log('Received values of form: ', values);
      const user = await registerToFirebase(dispatch, values);
-     user && history.push("");
+     user && history.push("/contact");
      dispatch({
          type: LOGIN_STATE,
          payload: true

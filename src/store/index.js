@@ -30,8 +30,6 @@ import {
     FAIL_REGISTER_REQUEST,
     LOGIN_STATE
  } from '../utils/constants';
-import burgerBuns from '../json/burgerBuns.json';
-import ingredient from '../json/ingredient.json';
 import materials from '../json/materials.json';
 
 
@@ -67,7 +65,7 @@ const initialState = {
         userInfo: null,
         error: "",
       },
-    login: false
+    login: false,  
 }
 let cartItems = {};
 let itemBuns = {};
@@ -229,10 +227,10 @@ function reducer(state, action) {
                 },
             };
         case LOGIN_STATE: 
-        return {
-            ...state,
-            login: action.payload
-        }
+            return {
+                ...state,
+                login: action.payload
+            }
         default:
             return state;
     }
