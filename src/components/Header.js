@@ -41,20 +41,19 @@ export default function Header() {
      }
     return (
         <header className="headerBgc">
-            <div>
-                
+            <div> 
                 <img className="logo" src={imgLogo} />
             </div>
             <div className="headerTextBox">
-            <Menu mode="horizontal" className="headerItems">
-                   <Menu.Item key="1" >
-                    <Link to="/" className="headerTextLink">
-                        <div className="headerTextHome">
-                            <div className="homeLine">
-                                <h1 className="headerText">HOME</h1>
+                <Menu mode="horizontal" className="headerItems">
+                    <Menu.Item key="1" >
+                        <Link to="/" className="headerTextLink">
+                            <div className="headerTextHome">
+                                <div className="homeLine">
+                                    <h1 className="headerText">HOME</h1>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
                         <Link to="/burger" className="headerTextLink">
@@ -71,21 +70,16 @@ export default function Header() {
                                 <div className="contactLine">
                                     <h1 className="headerText">CONTACT</h1>
                                 </div>
-                                
                             </div>
-                            
                         </Link>
-                    </Menu.Item> 
-               
-                
-                
-            </Menu>
+                    </Menu.Item>     
+                </Menu>
             </div>
             <div>
                 <CartSummary />
                 {
-                    state.login === true?<span onClick={handleLogout} className="wantToLogout"><img src={logout} className="accountimg"/></span>
-                    :state.login === false?<span><Link to="/login"><img src={login} className="accountimg"/></Link></span>:""
+                state.login === true?<span onClick={handleLogout} className="wantToLogout"><img src={logout} className="accountimg"/></span>
+                :state.login === false?<span><Link to="/login"><img src={login} className="accountimg"/></Link></span>:""
                 }
             </div>
             

@@ -16,10 +16,11 @@ export default function ContactDetail() {
     const [contactEmail, setContactEmail] = useState("");
     const [contactMessage, setContactMessage] = useState("");
     const [contactLoad, setContactLoad] = useState(false);
-    // const tt= login === true?{email}:""
-    // tt = userInfo;
+
     const {email} = login === true?userInfo:""
+
     const history = useHistory();
+
     const contactFinish = async (e) => {
         setContactLoad(true);
         const ref = db.collection('contact').doc();
@@ -32,11 +33,11 @@ export default function ContactDetail() {
             alert("成功送出！！");
         })
         history.push("/");
-
         setContactName("");
         setContactLoad("");
         setContactMessage("");
-;    }
+    }
+
     return(
         <div>
             <Row>

@@ -281,6 +281,9 @@
 .headerItems :hover .headerText {
   color: #000000;
 }
+.headerItems {
+  margin-left: 50px;
+}
 .headerTextBox {
   display: flex;
   justify-content: center;
@@ -320,9 +323,13 @@ h1.headerText {
 }
 
 /* Home */
+.home-start-box {
+  display: flex;
+  justify-content: center;
+}
 .imgHome {
   width: 100vw;
-  margin-top: 28vh;
+  margin-top: 18vh;
 }
 
 .homeContent {
@@ -332,7 +339,13 @@ h1.headerText {
 .sectionHome {
   height: 100vh;
 }
-
+.home-title {
+  font-size: 42px;
+  text-align: center;
+  font-family: "Adobe Clean Regular", sans-serif;
+  letter-spacing: 8px;
+  line-height: 3;
+}
 .homeText {
   font-size: 36px;
   font-family: "Andale Mono", AndaleMono, monospace;
@@ -392,7 +405,7 @@ h1.headerText {
 
 .btnStart {
   width: 35vh;
-  padding-top: 9vh;
+  /* padding-top: 9vh; */
 }
 
 /* burger buns */
