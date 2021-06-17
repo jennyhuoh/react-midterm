@@ -199,6 +199,57 @@
   margin-left: 110px;
   margin-top: 60px;
 }
+.contact-form .ant-input-affix-wrapper {
+  height: 100px;
+  background-color: #FFE283;
+  border: 4px solid #696969;
+  border-radius: 15px;
+}
+.contact-form .ant-input-affix-wrapper:hover {
+  border-color: #696969;
+}
+.contact-form .ant-input{
+  background-color: #FFE283;
+  color: #696969;
+}
+.contact-user-icon {
+  width: 57px;
+  padding-left: 15px;
+}
+.contact-mailR-icon {
+  width: 54px;
+  padding-left: 18px;
+}
+.contact-form .ant-input:placeholder-shown {
+  color: #696969;
+  font-size: 22px;
+  font-family: "Adobe Clean Regular", sans-serif;
+  padding-left: 20px;
+}
+.contact-form .ant-input::placeholder {
+  color: #696969;
+  font-size: 22px;
+  font-family: "Adobe Clean Regular", sans-serif;
+  padding-left: 20px;
+}
+.contact-form .ant-input {
+  color: #696969;
+  font-size: 22px;
+  font-family: "Adobe Clean Regular", sans-serif;
+}
+textarea,textarea.ant-input:hover,textarea:focus{
+  border: 4px solid #696969;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 15px;
+}
+textarea, textarea.ant-input {
+  border: 4px solid #696969;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 15px;
+}
+
 /* Header */
 .wantToLogout {
   cursor: pointer;
@@ -364,7 +415,7 @@ h1.headerText {
 }
 .btnstart-gray {
   margin-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 85px;
 }
 
 /* burger buns */

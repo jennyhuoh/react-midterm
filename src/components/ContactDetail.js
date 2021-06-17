@@ -7,6 +7,8 @@ import { StoreContext } from '../store/index';
 import leftPhone from '../images/icon-phone.png';
 import leftMail from '../images/icon-mail.png';
 import leftLocation from '../images/icon-location.png';
+import rightName from '../images/icon-name.png';
+import rightMail from '../images/icon-mail-contactR.png';
 import { db } from '../api/index';
 
 export default function ContactDetail() {
@@ -69,6 +71,7 @@ export default function ContactDetail() {
                         <Form.Item
                             value={contactName}
                             name="contactName"
+                            className="contactInput"
                             rules={[
                             { 
                                 required: true,
@@ -77,39 +80,40 @@ export default function ContactDetail() {
                             ]}
                         >
                             <Input 
-                                prefix={<UserOutlined className="site-form-item-icon contact-user-icon" />} 
+                                prefix={<img src={rightName} className="site-form-item-icon contact-user-icon" />} 
                                 placeholder="NAME"
                                 onChange={(e) => setContactName(e.target.value)} />
                         </Form.Item>
                         {
-                            login === false?
-                            <Form.Item
-                                value={contactEmail}
-                                name="contactEmail"
-                                rules={[
+                        login === false?
+                        <Form.Item
+                            value={contactEmail}
+                            name="contactEmail"
+                            rules={[
                             {
-                                type: "email",
-                                message: "The input is not valid E-mail!",
+                            type: "email",
+                            message: "The input is not valid E-mail!",
                             },
                             {
-                                required: true,
-                                message: "Please input your E-mail!",
+                            required: true,
+                            message: "Please input your E-mail!",
                             },
                             ]}
                         >
-                            <Input 
-                                prefix={<MailFilled className="site-form-item-icon"/>} 
-                                placeholder="YOUR EMAIL"
-                                onChange={(e) => setContactEmail(e.target.value)} />
+                        <Input 
+                            prefix={<img src={rightMail} className="site-form-item-icon contact-mailR-icon"/>} 
+                            placeholder="YOUR EMAIL"
+                            className="contact-input"
+                            onChange={(e) => setContactEmail(e.target.value)} />
                         </Form.Item>:<div>{email}</div>
                         } 
-                        
                         <Form.Item
                             value={contactMessage}
                             name="contactMessage"
-                            rules={[{ required: true, message: 'Please input your password!' }]}
+                            rules={[{ required: true, message: 'Please input the content!' }]}
                         >
-                            <Input.TextArea 
+                            <Input.TextArea
+                                style={{height: "240px"}}
                                 placeholder="MESSAGE"
                                 onChange={(e) => setContactMessage(e.target.value)} />
                         </Form.Item>
@@ -119,17 +123,18 @@ export default function ContactDetail() {
                                 type="primary"
                                 htmlType="submit"
                                 loading
+                                className="btn-send"
                             >
                                 SEND
                             </Button>):(
                             <Button
                                 type="primary"
                                 htmlType="submit"
+                                className="btn-send"
                             >
                                 SEND
                             </Button>
                         )}
-                            {/* <Button>SEND</Button> */}
                         </Form.Item>
                     </Form>
                 </Col>
