@@ -202,13 +202,17 @@
 .contact-form .ant-input-affix-wrapper {
   height: 100px;
   background-color: #FFE283;
-  border: 4px solid #696969;
+  border: 3px solid #696969;
   border-radius: 15px;
 }
 .contact-form .ant-input-affix-wrapper:hover {
   border-color: #696969;
 }
 .contact-form .ant-input{
+  background-color: #FFE283;
+  color: #696969;
+}
+.contact-form .ant-input-affix-wrapper > input.ant-input:focus {
   background-color: #FFE283;
   color: #696969;
 }
@@ -238,18 +242,44 @@
   font-family: "Adobe Clean Regular", sans-serif;
 }
 textarea,textarea.ant-input:hover,textarea:focus{
-  border: 4px solid #696969;
+  border: 3px solid #696969;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 15px;
 }
 textarea, textarea.ant-input {
-  border: 4px solid #696969;
+  border: 3px solid #696969;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 15px;
 }
-
+.btn-send {
+  background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/btn-send.png);
+  width: 520px;
+  height: 80px;
+  margin-top: 20px;
+  background-size: 518px 78px;
+  background-color: #FFE283;
+  border-color: #FFE283;
+  box-shadow: none;
+  border-radius: 40px;
+}
+.btn-send:focus {
+  background-color: #FFE283;
+  border-color: #FFE283;
+  box-shadow: none;
+  background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/btn-send.png);
+  background-size: 518px 78px;
+  border-radius: 40px;
+}
+.btn-send:hover {
+  background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/btn-send-hover.png);
+  background-size: 518px 78px;
+  background-color: #FFE283;
+  border-color: #FFE283;
+  box-shadow: none;
+  border-radius: 40px;
+}
 /* Header */
 .wantToLogout {
   cursor: pointer;

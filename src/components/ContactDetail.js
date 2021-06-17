@@ -124,16 +124,12 @@ export default function ContactDetail() {
                                 htmlType="submit"
                                 loading
                                 className="btn-send"
-                            >
-                                SEND
-                            </Button>):(
+                            > </Button>):(
                             <Button
                                 type="primary"
                                 htmlType="submit"
                                 className="btn-send"
-                            >
-                                SEND
-                            </Button>
+                            > </Button>
                         )}
                         </Form.Item>
                     </Form>
