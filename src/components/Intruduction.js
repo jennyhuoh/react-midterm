@@ -1,4 +1,5 @@
 import imgHome from '../images/img-home.png';
+import imgHomeMobile from'../images/img-home-mobile.png';
 import btnCustomize from '../images/btn-CustomizeNow.png';
 import imgStepOne from '../images/img-step1.png';
 import imgStepTwo from '../images/img-step2.png';

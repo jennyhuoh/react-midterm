@@ -456,6 +456,68 @@ h1.headerText {
   margin-top: 140px;
   text-align: center;
 }
+.selectSection {
+  margin-top: 2vh;
+}
+.posa {
+  position: absolute;
+}
+.bunsBox {
+  width: 50vw;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  margin-top: 7.5vh;
+}
+.bunBottom {
+  margin-top: 36vh;
+}
+.select-classic-buns {
+  align-items: center;
+  text-align: center;
+  width: 45vh;
+}
+.tomato {
+  margin-top: 30vh;
+}
+.meat {
+  margin-top: 27vh;
+}
+.cheese {
+  margin-top: 23vh;
+}
+.vegetable {
+  margin-top: 19vh;
+}
+.onion {
+  margin-top: 15vh;
+}
+.totalPriceBox {
+  width: 100%;
+  margin-top: 55vh;
+}
+.totalPrice {
+  font-family: "Adobe Clean Regular", sans-serif;
+  color: #555555;
+  font-size: 2.7vh;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+
+}
+.btn-checkout-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.btn-checkout {
+  width: 210px;
+}
+.selectSection-selector {
+  margin-top: 6vh;
+  height: 90vh
+}
 .rightBox {
   background-color: #FFF9E6;
   height: 68vh;
@@ -463,6 +525,9 @@ h1.headerText {
   width: 90%;
   overflow: auto;
   border-radius: 60px;
+}
+.rightBoxBun {
+  padding-top: 30px;
 }
 .bun-title {
   font-size: 30px;
@@ -473,28 +538,13 @@ h1.headerText {
   width: 20px;
   align-items: center;
 }
-.rightBoxBun {
-  padding-top: 30px;
+.rightBoxBun-select {
+  width: 31vh;
+  margin-left: 34px;
 }
 .rightBoxMeat {
   margin-top: 40px;
 }
-.rightBoxIngredients {
-  padding-bottom: 60px;
-}
-.select-classic-buns {
-  align-items: center;
-  text-align: center;
-  width: 45vh;
-}
-.bunsBox {
-  width: 50vw;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  margin-top: 7.5vh;
-}
-
 .ant-radio-button-wrapper {
   width: 31vh;
   height: 6.7vh;
@@ -557,31 +607,87 @@ h1.headerText {
   letter-spacing: 2px;
   background-color: #E0E0E0;
 }
-.rightBoxBun-select {
-  width: 31vh;
-  margin-left: 34px;
-}
 .ant-radio-button-wrapper:first-child {
   border-radius: 30px;
 }
 .ant-radio-button-wrapper:last-child {
   border-radius: 30px;
 }
-.selectBurgerBun:hover {
-  color: #555555;
-  background-color: #E0E0E0;
-  border-color: #E0E0E0;
+.lineBox {
+  margin-top: 40px;
+  align-items: center;
 }
-.selectBurgerBun:focus {  
-  margin-top: 30px;
-  width: 31vh;
-  height: 6.7vh;
+.line {
+  margin-top: 5.6vh;
+  width: 10px;
+}
+.selectPrice {
   font-family: "Adobe Clean Regular", sans-serif;
   color: #555555;
-  font-size: 24px;
-  letter-spacing: 2px;
-  background-color: #FFE283;
-  border-color: #FFE283;
+  font-size: 2.3vh;
+  letter-spacing: 3px;
+  margin-top: 5.8vh;
+}
+.lineBox2 {
+  margin-top: 55px;
+  align-items: center;
+}
+.rightBoxIngredients {
+  padding-bottom: 60px;
+}
+.ingredients-items {
+  display: flex;
+}
+.selectPrice-ingredients {
+  margin-left: 40px;
+}
+.minusBg {
+  margin-top: 45px;
+  margin-left: 20px;
+  background-color: #E0E0E0;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.minus {
+  width: 40%;
+  height: 10%;
+  background-color: #707070;
+  border-radius: 20px;
+}
+.ingredientNum {
+  margin-top: 45px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 2;
+  border-color: #E0E0E0;
+}
+.plusBg {
+  margin-top: 45px;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background-color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.plus {
+  width: 10%;
+  height: 45%;
+  background-color: #707070;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: 1px;
 }
 .iname_yellow {
   width: 31vh;
@@ -611,279 +717,7 @@ h1.headerText {
   margin-left: 34px;
   line-height: 2;
 }
-.ingredients-items {
-  display: flex;
-}
-.selectPrice-ingredients {
-  margin-left: 40px;
-}
 
-.step-bun-img {
-  width: 150vh;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-}
-.step-bun {
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  margin-top: 16vh;
-}
-.selectSection {
-  margin-top: 2vh;
-}
-.selectSection-selector {
-  margin-top: 6vh;
-  height: 90vh
-}
-.selectSection-selector-right {
-  display: flex;
-}
-.selectPrice {
-  font-family: "Adobe Clean Regular", sans-serif;
-  color: #555555;
-  font-size: 2.3vh;
-  letter-spacing: 3px;
-  margin-top: 5.8vh;
-}
-.burgerBun-btn {
-  display: flex;
-  padding-left: 38px;
-}
-.totalPrice {
-  font-family: "Adobe Clean Regular", sans-serif;
-  color: #555555;
-  font-size: 2.7vh;
-  letter-spacing: 3px;
-  display: flex;
-  justify-content: center;
-
-}
-.totalPriceBox {
-  width: 100%;
-  margin-top: 55vh;
-}
-.btn-checkout-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 4vh;
-}
-.btn-checkout {
-  width: 210px;
-}
-.btnNextBox {
-  width: 76vh;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 17vh;
-}
-.line {
-  margin-top: 5.6vh;
-  width: 10px;
-}
-.lineBox {
-  margin-top: 40px;
-  align-items: center;
-}
-.lineBox2 {
-  margin-top: 55px;
-  align-items: center;
-}
-.minusBg {
-  margin-top: 45px;
-  margin-left: 20px;
-  background-color: #E0E0E0;
-  width: 32px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 10px 0 0 10px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-}
-.minus {
-  width: 40%;
-  height: 10%;
-  background-color: #707070;
-  border-radius: 20px;
-}
-.plus {
-  width: 10%;
-  height: 45%;
-  background-color: #707070;
-  border-radius: 20px;
-  position: absolute;
-  margin-top: 1px;
-}
-.plusBg {
-  margin-top: 45px;
-  width: 32px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 0 10px 10px 0;
-  background-color: #E0E0E0;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-}
-.ingredientNum {
-  margin-top: 45px;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 2;
-  border-color: #E0E0E0;
-}
-.ingredientNumB {
-  margin-top: 45px;
-  width: 30px;
-  height: 30px;
-  background-color: #000;
-  text-align: center;
-  line-height: 2;
-  border-color: #E0E0E0;
-}
-/* meat */
-.btnNextBox-meat {
-  width: 76vh;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 6vh;
-}
-.btnBackBox-meat {
-  margin-left: 8vh;
-  margin-top: 10vh;
-}
-.bunTop {
-  margin-top: 12vh;
-}
-.btnBackBox-meat {
-  margin-left: 8vh;
-  margin-top: 9.5vh;
-  height: 59vh;
-  display: flex;
-  align-items: flex-end;
-}
-/* ingredients */
-/* label.ant-checkbox-wrapper.ant-checkbox-group-item {
-  width: 38vh;
-  height:6.5vh;
-  background-color: #FFE283;
-  margin-top: 3vh;
-  border-radius: 25px;
-  align-items: center;
-  padding-left: 5vh;
-}
-.ant-checkbox-group {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  padding: 10px;
-}
-
-.ant-checkbox + span {
-  font-family: "Adobe Clean Regular", sans-serif;
-  color: #555555;
-  font-size: 3vh;
-  letter-spacing: 3px;
-  margin-left: 4vh;
-}
-.ant-checkbox-inner{
-  width: 18px;
-  height: 18px;
-}
-.ant-checkbox-checked .ant-checkbox-inner::after {
-  border-width: 4px;
-  width: 14px;
-  height: 18px
-} */
-/* .ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #FFE283;
-  border-color: #FFE283;
-} */
-.priceMove {
-  position: absolute;
-  margin-top: -35vh;
-  margin-left: 39.5vh;
-}
-.priceMoveDown {
-  margin-top: 6vh;
-}
-.posa {
-  position: absolute;
-}
-.bunBottom {
-  margin-top: 36vh;
-}
-.tomato {
-  margin-top: 30vh;
-}
-.meat {
-  margin-top: 27vh;
-}
-.cheese {
-  margin-top: 23vh;
-}
-.vegetable {
-  margin-top: 19vh;
-}
-.onion {
-  margin-top: 15vh;
-}
-.leftCol {
-  height: 60.5vh;
-}
-.btnBackBox-ingredients {
-  margin-left: 8vh;
-  margin-top: 9.5vh;
-  height: 60.5vh;
-  display: flex;
-  align-items: flex-end;
-}
-/* complete */
-.posa-complete {
-  margin-left: 66.5vh;
-}
-.bunTop {
-  margin-top: 10vh;
-}
-.totalLabel-img {
-  width: 20vh;
-}
-.completePrice {
-  margin-top: 25vh;
-}
-.complete-bottom-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 22vh;
-
-}
-.complete-bottom-section-button {
-  width: 34vh;
-}
-.complete-bottom-section-oneMore {
-  padding-right: 4vh;
-}
-.complete-bottom-section-checkOut {
-  padding-left: 4vh;
-}
-.complete-bottom-section-line {
-  width: 5vh;
-  margin-top: 1vh;
-}
-.completePrice-total {
-  font-family: "Adobe Clean Regular", sans-serif;
-  color: #555555;
-  font-size: 2.3vh;
-  letter-spacing: 3px;
-  padding-bottom: -5vh;
-  margin-left: 2vh;
-}
 /* cartFooter */
 .cartFooter {
   background-color: #fff;
@@ -1050,11 +884,7 @@ footer.ant-layout-footer {
   background-color: #E0E0E0;
 }
 @media (max-width: 375px) {
-  /* .ant-layout-header {
-    margin-left: -20px;
-  } */
   .layout-header {
-    
     width: 375px;
   }
   .container {
@@ -1075,17 +905,39 @@ footer.ant-layout-footer {
   .headerTextBox {
     display: none;
   }
-  /* Home */
-  .imgHome {
-    display: none
+  .footerContent {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
-  .imgHomeTwo {
+  .layout-footer-home {
+    height: 70px;
+  }
+  /* Home */
+  .btnstart-gray {
+    width: 100px;
+    height: 30px;
+  }
+  .btnStart {
+    width: 100px;
+    height: 30px
+  }
+  .home-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    width: 150px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+  /* .imgHome {
+    display: none
+  } */
+  /* .imgHomeTwo {
     display: block;
     width: 200px;
     margin-top: 100px;
     padding-top: 60px;
     margin-left: 25%;
-  }
+  } */
   .homeContent {
     width: 375px;
   }
@@ -1132,220 +984,6 @@ footer.ant-layout-footer {
     padding: 0;
     margin-top: -600px;
     margin-left: -65px;
-  }
-  
-  /* burgerBuns */
-  .step-bun-img {
-    display: none;
-  }
-  .mobileBuns {
-    display: block;
-    width: 200px;
-    margin-left: 24%;
-  }
-  .bunsBox {
-    display: none;
-  }
-  .bunsBoxmobile {
-    display: block;
-    width: 375px;
-    margin-top: 110px;
-  }
-  .mobileSelectBuns {
-    width: 200px;
-    margin-left: 20%;
-  }
-  .mobileBunsBottom {
-    margin-top: -12px;
-  }
-  .totalPriceBox {
-    width: 150px;
-  }
-  .selectSection {
-    width: 375px;
-  }
-  .mobileNone {
-    display: none;
-    width: 0;
-  }
-  .btnNextBox {
-    width: 100px;
-    margin-left: 50%;
-   margin-top: 100px;
-  }
-  .burgerBun-btn {
-    width: 160px;
-    height: 60px;
-    margin-left: 25%;
-  }
-  .burgerBun-btn-first {
-    margin-top: 35px;
-   
-  }
-  .selectBurgerBun {
-    font-size: 18px;
-    letter-spacing: 1px;
-    height: 38px;
-  }
-  .linemobile {
-    width: 20px;
-  }
-  .line {
-    margin-top: 45px;
-  }
-  .selectPrice {
-    font-size: 10px;
-    margin-top: 47px;
-    margin-left: 7px;
-  }
-  .totalPriceBox {
-    width: 375px;
-  }
-  .totalPrice {
-    width: 200px;
-    font-size: 18px;
-    margin-left: 33%;
-  }
-  .selectBurgerBun:focus {
-    font-size: 18px;
-    letter-spacing: 1px;
-    height: 38px;
-    width: 200px;
-    height: 40px;
-  }
-  /* meat */
-  .meat-bunBottom-mobile {
-    width: 200px;
-    margin-top: 40px;
-    margin-left: 42%;
-  }
-  .meat-mobile {
-    width: 200px;
-    margin-top: 20px;
-    margin-left: 42%;
-  }
-  .meat-bunTop-mobile {
-    width: 200px;
-    margin-top: -30px;
-    margin-left: 42%;
-  }
-  .shrimp-btn {
-   padding-top: 150px;
-  }
-  .bacon-btn {
-    margin-top: 50px;
-  }
-  .beef-btn {
-    margin-top: -10px;
-  }
-  .btnNextBox-meat {
-    display: flex;
-    width: 375px;
-    justify-content: space-between;
-    padding: 40px;
-  }
-  .btnNext-meat {
-    width: 100px;
-  }
-  .ingredients-bunBottom-mobile {
-    width: 200px;
-    margin-top: 80px;
-    margin-left: 42%;
-  }
-  .ingredients-bunTop-mobile {
-    width: 200px;
-    margin-top: -30px;
-    margin-left: 42%;
-  }
-  .ingredients-meat-mobile {
-    width: 200px;
-    margin-left: 42%;
-    margin-top: 55px;
-  }
-  .ingredients-0-mobile {
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 30px;
-  }
-  .ingredients-1-mobile {
-    width: 60%;
-    margin-left: 20%;
-    
-  }
-  .ingredients-3-mobile {
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 20px;
-  }
-  label.ant-checkbox-wrapper.ant-checkbox-group-item {
-    width: 200px;
-    margin-top: 15px;
-    height: 42px;
-    padding-left: 25px;
-    margin-left: 15%;
-  }
-  .ant-checkbox + span {
-    margin-left: 5px;
-    font-size: 18px;
-  }
-  .priceMove {
-    margin-left: 70%;
-    margin-top: -215px;
-  }
-  .priceMoveDown {
-    margin-top: 35px;
-  }
-  .badge {
-    margin-right: 0;
-    margin-left: 20px;
-  }
-  sup .ant-scroll-number {
-    margin-right: -12px;
-  }
-  .complete-bottom-section-line {
-    display: none;
-  }
-  .complete-burger {
-    width: 200px;
-  }
-  .mobileonion {
-    margin-top: 120px;
-    margin-left: 22%;
-  }
-  .mobilevegetable {
-    margin-top: 140px;
-    margin-left: 22%;
-  }
-  .mobilecheese {
-    margin-top: 160px;
-    margin-left: 22%;
-  }
-  .mobilemeat {
-    margin-top: 180px;
-    margin-left: 22%;
-  }
-  .mobilebunBottom {
-    margin-top: 200px;
-    margin-left: 22%;
-  }
-  .mobilebunTop {
-    margin-left: 22%;
-  }
-  .complete-bottom-section-button {
-    width: 230px;
-    display: block;
-    
-  }
-  .complete-bottom-section-oneMore {
-    margin-top: -90px;
-    margin-left: 40px;
-  }
-  .completePricemobile {
-    margin-left: 16%;
-  }
-  .complete-bottom-section-checkOut {
-    margin-top: -20px;
-    margin-left: -5%;
   }
   .cart-item-description {
     display: none;
@@ -1395,6 +1033,5 @@ footer.ant-layout-footer {
   }
   .ant-badge-count {
     margin-right: 11px;
-
   }
 }
