@@ -68,7 +68,6 @@
 .signup-form {
   width: 50%;
   margin-top: 25px;
-  /* text-align: center; */
   margin-left: 140px;
 }
 .card .ant-input::placeholder {
@@ -281,6 +280,9 @@ textarea, textarea.ant-input {
   border-radius: 40px;
 }
 /* Header */
+.show-mobile {
+  display: none;
+}
 .wantToLogout {
   cursor: pointer;
 }
@@ -388,6 +390,14 @@ textarea, textarea.ant-input {
   align-content: center;
   align-items: center;
 }
+.headerTextLink:active .homeLine {
+  width: 80px;
+  height: 55px;
+  border-bottom: 4px solid #FFE283;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
 .headerTextLink:hover .burgerLine {
   width: 120px;
   height: 55px;
@@ -442,6 +452,9 @@ h1.headerText {
 .imgYellow {
   width: 100%;
   padding-top: 8vh;
+}
+.steps-mobile {
+  display: none;
 }
 .btnstart-gray {
   margin-top: 20px;
@@ -886,21 +899,30 @@ footer.ant-layout-footer {
 @media (max-width: 375px) {
   .layout-header {
     width: 375px;
+    padding: 0;
   }
   .container {
     width: 375px;
   }
+  .header-right {
+    margin-right: -30px;
+  }
   .cartimg {
     width: 4vh;
-    margin-right: -24px
+    margin-right: 10px;
   } 
   .accountimg {
-    display: none;
+    width: 4vh; 
+    margin-right: 25px; 
   }
   .logo {
     width: 8vh;
-    margin-left: 13vh;
+    /* margin-left: -200px; */
     margin-top: 14px;
+    margin-right: 75px;
+  }
+  .headerBgc {
+    justify-content: center;
   }
   .headerTextBox {
     display: none;
@@ -912,14 +934,78 @@ footer.ant-layout-footer {
   .layout-footer-home {
     height: 70px;
   }
-  /* Home */
-  .btnstart-gray {
-    width: 100px;
-    height: 30px;
+  .show-mobile {
+    display: block;
   }
+  .ham-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 18px;
+    width: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 95px;
+  }
+  .ham-menu-open{
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    z-index: 3;
+  }
+  .ham-menu-bar {
+    width: 20px;
+    height: 3px;
+    background: #FFE283;
+  }
+  .hamBg {
+    background-color: #FFE283;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    width: 60%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .hamBg-white {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+  }
+  .hamText {
+    color: #555555;
+    font-size: 14px;
+    font-family: "Adobe Clean Regular", sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 140px;
+    height: 45px;
+    letter-spacing: 2px;
+    margin-top: 18px;
+  }
+  .hamText a {
+    text-decoration: none;
+    color: #555555
+  }
+  /* Home */
   .btnStart {
-    width: 100px;
-    height: 30px
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
   }
   .home-title {
     font-size: 14px;
@@ -927,17 +1013,43 @@ footer.ant-layout-footer {
     width: 150px;
     line-height: 20px;
     margin-top: 30px;
+    margin-left: 30%;
   }
-  /* .imgHome {
-    display: none
-  } */
-  /* .imgHomeTwo {
+  .homeSec2Bg {
+    background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/img-homeBg2-mobile.png);
+    background-position-x: -45px;
+    background-size: auto;
+    background-size: 450px 2000px;
+    margin-top: 30px;
+  }
+  .steps {
+    display: none;
+  }
+  .imgYellow {
+    width: 90%;
+    padding-left: 38px;
+    padding-top: 6px;
+  }
+  .steps-mobile {
     display: block;
-    width: 200px;
+    padding-top: 55px;
+  }
+  .btnstart-gray {
+    width: 155px;
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+  .imgHome {
+    display: none
+  }
+  .imgHomeTwo {
+    display: block;
     margin-top: 100px;
-    padding-top: 60px;
-    margin-left: 25%;
-  } */
+  }
   .homeContent {
     width: 375px;
   }
@@ -946,44 +1058,11 @@ footer.ant-layout-footer {
     letter-spacing: 1px;
     line-height: 8;
   }
-  .imgYellow {
-    display: none;
-  }
   .sectionHome {
     height: auto;
   }
-  .homeStepTitle {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-top: 40px;
-  }
-  .homeStepSummary {
-    font-size: 12px;
-    letter-spacing: 2.5px;
-    margin-top: 15px;
-    font-weight: 500;
-  }
-  .imgHomeBurger {
-    width: 180px;
-  }
-  .step {
-    margin-left: 16%;
-  }
-  .stepFour {
-    margin-left: 0;
-  }
   .layout-footer {
     background-color: #fff;
-  }
-  .imgHomeStart {
-    display: none;
-  }
-  .btnStart {
-    width: 180px;
-    margin: 0;
-    padding: 0;
-    margin-top: -600px;
-    margin-left: -65px;
   }
   .cart-item-description {
     display: none;

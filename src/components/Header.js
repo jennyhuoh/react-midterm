@@ -1,13 +1,16 @@
 import { Link, useHistory } from 'react-router-dom';
 import { Menu, Modal } from 'antd';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import imgLogo from '../images/burger-logo.png';
 import { getJSON } from '../api/index';
 import { setPageContent } from '../actions/index';
 import { StoreContext } from '../store/index';
 import { logoutFromFirebase } from '../actions/index';
-import { LOGIN_STATE } from '../utils/constants';
-import CartSummary from '../components/CartSummary';
+import { LOGIN_STATE, SET_ISONTOUCH } from '../utils/constants';
+import CartSummary from './CartSummary';
+import HamMenu from './HamMenu';
+import HamContent from './HamContent';
+import HamBg from './HamBg';
 import account from '../images/btn-Xaccount.png';
 import login from '../images/btn-login.png';
 import logout from '../images/btn-logout.png';
@@ -39,8 +42,18 @@ export default function Header() {
             onOk() {},
           });
      }
+    const [isOnTouch, setIsOnTouch] = useState(false);
+    let hamContent;
+    let hamBg;
+   if(isOnTouch) {
+        hamContent = <HamContent />;
+        hamBg = <HamBg />;
+    }
     return (
         <header className="headerBgc">
+            <HamMenu onClick={()=>setIsOnTouch(!isOnTouch)} isOnTouch={isOnTouch}/>
+            {hamContent}
+            {hamBg}
             <div> 
                 <img className="logo" src={imgLogo} />
             </div>
@@ -75,7 +88,7 @@ export default function Header() {
                     </Menu.Item>     
                 </Menu>
             </div>
-            <div>
+            <div className="header-right">
                 <CartSummary />
                 {
                 state.login === true?<span onClick={handleLogout} className="wantToLogout"><img src={logout} className="accountimg"/></span>
