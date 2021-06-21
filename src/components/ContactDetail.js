@@ -44,7 +44,92 @@ export default function ContactDetail() {
         <div>
             <div className="show-mobile">
                 <div className="contact-left-title">Contact us</div>
-                <div></div>
+                <div className="contact-right-box">
+                    <Form 
+                        form={form}
+                        name="contact" 
+                        className="contact-form"
+                        onFinish={contactFinish}>
+                        <Form.Item
+                            value={contactName}
+                            name="contactName"
+                            className="contactInput"
+                            rules={[
+                            { 
+                                required: true,
+                                message: "Please input your name",
+                            },
+                            ]}
+                        >
+                            <Input 
+                                prefix={<img src={rightName} className="site-form-item-icon contact-user-icon" />} 
+                                placeholder="NAME"
+                                onChange={(e) => setContactName(e.target.value)} />
+                        </Form.Item>
+                        {
+                        login === false?
+                        <Form.Item
+                            value={contactEmail}
+                            name="contactEmail"
+                            rules={[
+                            {
+                            type: "email",
+                            message: "The input is not valid E-mail!",
+                            },
+                            {
+                            required: true,
+                            message: "Please input your E-mail!",
+                            },
+                            ]}
+                        >
+                        <Input 
+                            prefix={<img src={rightMail} className="site-form-item-icon contact-mailR-icon"/>} 
+                            placeholder="YOUR EMAIL"
+                            className="contact-input"
+                            onChange={(e) => setContactEmail(e.target.value)} />
+                        </Form.Item>:<div>{email}</div>
+                        } 
+                        <Form.Item
+                            value={contactMessage}
+                            name="contactMessage"
+                            rules={[{ required: true, message: 'Please input the content!' }]}
+                        >
+                            <Input.TextArea
+                                style={{height: "130px"}}
+                                placeholder="MESSAGE"
+                                onChange={(e) => setContactMessage(e.target.value)} />
+                        </Form.Item>
+                        <Form.Item shouldUpdate>
+                        {contactLoad ? (
+                            <Button
+                                type="primary"
+                                htmlType="submit"
+                                loading
+                                className="btn-send"
+                            > </Button>):(
+                            <Button
+                                type="primary"
+                                htmlType="submit"
+                                className="btn-send"
+                            > </Button>
+                        )}
+                        </Form.Item>
+                    </Form>
+                </div>
+                <div className="contact-left-information-box">
+                            <Row>
+                                <Col span={4} className="contact-left-icon-box contact-leftPhone-box"><img src={leftPhone} className="contact-left-icon" /></Col>
+                                <Col span={20} className="contact-left-p-box contact-leftPhone-box"><div className="contact-left-p">0987654321</div></Col>
+                            </Row>
+                            <Row>
+                                <Col span={4} className="contact-left-icon-box"><img src={leftMail} className="contact-left-icon" /></Col>
+                                <Col span={20} className="contact-left-p-box"><div className="contact-left-p">burger000@gmail.com</div></Col>
+                            </Row>
+                            <Row>
+                                <Col span={4} className="contact-left-icon-box"><img src={leftLocation} className="contact-left-icon"/></Col>
+                                <Col span={20} className="contact-left-p-box"><div className="contact-left-p">123 Burger Street</div></Col>
+                            </Row>
+                        </div>
             </div>
             <Row className="show-desktop">
                 <Col span={12} className="contact-left">

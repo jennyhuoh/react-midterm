@@ -66,7 +66,6 @@ export default function CartList() {
                                         <div className="minus"></div>
                                         <div className="plus"></div>
                                     </div>
-                            {/* <div className="cart-qty">1</div> */}
                             <div className="cart-price">NT{(state.total + state.meatTotal)*state.cartQty}</div>
                         </div>    
                     </div>

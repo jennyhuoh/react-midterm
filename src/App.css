@@ -878,7 +878,7 @@ footer.ant-layout-footer {
   justify-content: center;
   height: 70px;
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
 }
 .minusBg-cart {
   background-color: #FFE283;
@@ -1373,5 +1373,95 @@ footer.ant-layout-footer {
   }
   .signup-back {
     margin-top: 24px;
+  }
+  /* contact */
+  .contact-right-box {
+    background-image: url(https://raw.githubusercontent.com/jennyhuoh/react-midterm/main/src/images/img-contactBg-mobile.png);
+    margin-top: 15px;
+    height: 425px;
+    width: 100%;
+  }
+  .contact-left-title {
+    margin-top: 100px;
+    margin-left: 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .contact-form {
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 295px;
+    padding-top: 26px;
+  }
+  .contact-form .ant-input-affix-wrapper {
+    height: 57px;
+    border: 2px solid #696969;
+  }
+  .contact-user-icon {
+    width: 32px;
+    padding-left: 5px;
+  }
+  .contact-mailR-icon {
+    width: 30px;
+    padding-left: 8px;
+  }
+  .contact-form .ant-input:placeholder-shown {
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  .contact-form .ant-input::placeholder {
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  .contact-form .ant-input {
+    font-size: 14px;
+  }
+  textarea,textarea.ant-input:hover,textarea:focus {
+    border: 2px solid #696969;
+  }
+  textarea, textarea.ant-input {
+    border: 2px solid #696969; 
+  }
+  .btn-send {
+    width: 300px;
+    margin-top: 0;
+    height: 40px;
+    background-size: 298px 38px;
+  }
+  .btn-send:focus {
+    width: 300px;
+    height: 40px;
+    background-size: 298px 38px;
+  }
+  .btn-send:hover {
+    width: 300px;
+    height: 40px;
+    background-size: 298px 38px;
+  }
+  .contact-left-information-box {
+    width: 333px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+  .contact-leftPhone-box {
+    margin: 0;
+  }
+  .contact-left-icon-box {
+    height: 30px;
+    margin-top: 15px;
+  }
+  .contact-left-icon {
+    width: 20px;
+  }
+  .contact-left-p-box {
+    height: 30px
+  }
+  .contact-left-p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }
