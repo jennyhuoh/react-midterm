@@ -42,7 +42,11 @@ export default function ContactDetail() {
 
     return(
         <div>
-            <Row>
+            <div className="show-mobile">
+                <div className="contact-left-title">Contact us</div>
+                <div></div>
+            </div>
+            <Row className="show-desktop">
                 <Col span={12} className="contact-left">
                     <div className="contact-left-box">
                         <div className="contact-left-title">Contact us</div>

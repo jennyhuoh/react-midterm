@@ -29,7 +29,8 @@ import {
     SUCCESS_REGISTER_REQUEST,
     FAIL_REGISTER_REQUEST,
     LOGIN_STATE,
-    SET_ISONTOUCH
+    SET_ISONTOUCH,
+    CART_QUANTITY
  } from '../utils/constants';
 import materials from '../json/materials.json';
 
@@ -67,7 +68,8 @@ const initialState = {
         error: "",
       },
     login: false,  
-    isOnTouch: false
+    isOnTouch: false,
+    cartQty: 1
 }
 let cartItems = {};
 let itemBuns = {};
@@ -237,6 +239,11 @@ function reducer(state, action) {
             return {
                 ...state,
                 isOnTouch: action.payload
+            }
+        case CART_QUANTITY: 
+            return {
+                ...state,
+                cartQty: action.payload
             }
         default:
             return state;

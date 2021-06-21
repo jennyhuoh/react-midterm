@@ -871,7 +871,26 @@ footer.ant-layout-footer {
   letter-spacing: 3px;
   display: flex;
   justify-content: flex-end;
-
+}
+.cart-btn-checkout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  position: fixed;
+  bottom: 100px;
+}
+.minusBg-cart {
+  background-color: #FFE283;
+  margin-left: 75px;
+  margin-top: 53px;
+}
+.plusBg-cart {
+  background-color: #FFE283;
+  margin-top: 53px;
+}
+.cart-qty-num {
+  margin-top: 53px;
 }
 .mobileLogo {
   display: none;
@@ -1272,6 +1291,18 @@ footer.ant-layout-footer {
   }
   .startCheckOut {
     width: 200px;
+  }
+  .minusBg-cart {
+    background-color: #FFE283;
+    margin-left: 35px;
+    margin-top: 53px;
+  }
+  .plusBg-cart {
+    background-color: #FFE283;
+    margin-top: 53px;
+  }
+  .cart-qty-num {
+    margin-top: 53px;
   }
   .ant-badge-count {
     margin-right: 11px;

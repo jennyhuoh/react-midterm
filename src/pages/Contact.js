@@ -24,9 +24,9 @@ function Contact() {
                 <Content className="layout-content">
                     <ContactDetail />
                 </Content>
-                {/* <Footer className="layout-footer">
+                <Footer className="layout-footer">
                     <AppFooter />
-                </Footer> */}
+                </Footer>
             </Layout>         
         </Layout>
     );

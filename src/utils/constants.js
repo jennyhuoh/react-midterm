@@ -34,3 +34,4 @@ export const LOGIN_STATE = 'LOGIN_STATE';
 // export const SUCCESS_COMMENT = 'SUCCESS_COMMENT';
 
 export const SET_ISONTOUCH = 'SET_ISONTOUCH';
+export const CART_QUANTITY = 'CART_QUANTITY';

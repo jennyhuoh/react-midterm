@@ -1,13 +1,27 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../store/index';
-import { SET_ITEM_BUNS, SET_ITEM_MEAT } from '../utils/constants';
+import { CART_QUANTITY, SET_ITEM_BUNS, SET_ITEM_MEAT } from '../utils/constants';
 import ingredients from '../json/ingredient.json';
 import materials from '../json/materials.json';
 import startCheckOut from '../images/btn-start-checkout.png';
 
 export default function CartList() {
-    const {state} = useContext(StoreContext);
+    const {state, dispatch} = useContext(StoreContext);
+    const onClickCartMinus = () => {
+        if(state.cartQty > 1) {
+            dispatch({
+            type: CART_QUANTITY,
+            payload: state.cartQty -= 1
+        })
+        } 
+    }
+    const onClickCartPlus = () => {
+            dispatch({
+            type: CART_QUANTITY,
+            payload: state.cartQty += 1
+        })
+    }
             return(
                 <div>
                     <div style={{display:"flex"}} className="cart-title-box">
@@ -44,11 +58,19 @@ export default function CartList() {
                                 <div className="cart-dot">・</div>
                                 <div className="cart-meat-type">{state.cartMeat}</div>
                             </div>
-                            <div className="cart-qty">1</div>
-                            <div className="cart-price">NT{state.total + state.meatTotal}</div>
+                            <div className="minusBg minusBg-cart" onClick={onClickCartMinus}>
+                                        <div className="minus"></div>
+                                    </div>
+                                    <div className="ingredientNum cart-qty-num">{state.cartQty}</div>
+                                    <div className="plusBg plusBg-cart" onClick={onClickCartPlus}>
+                                        <div className="minus"></div>
+                                        <div className="plus"></div>
+                                    </div>
+                            {/* <div className="cart-qty">1</div> */}
+                            <div className="cart-price">NT{(state.total + state.meatTotal)*state.cartQty}</div>
                         </div>    
                     </div>
-                    <div className="cart-total-price">TOTAL: NT {state.total + state.meatTotal}</div>
+                    <div className="cart-total-price">TOTAL: NT {(state.total + state.meatTotal)*state.cartQty}</div>
                     <div className="cart-btn-checkout">
                         <Link to="/login">
                             <img src={startCheckOut} className="startCheckOut" />
