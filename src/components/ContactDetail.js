@@ -19,7 +19,7 @@ export default function ContactDetail() {
     const [contactMessage, setContactMessage] = useState("");
     const [contactLoad, setContactLoad] = useState(false);
 
-    const {email} = login === true?userInfo:""
+    // const {email} = login === true?userInfo:""
 
     const history = useHistory();
 
@@ -39,7 +39,6 @@ export default function ContactDetail() {
         setContactLoad("");
         setContactMessage("");
     }
-
     return(
         <div>
             <div className="show-mobile">
@@ -66,8 +65,6 @@ export default function ContactDetail() {
                                 placeholder="NAME"
                                 onChange={(e) => setContactName(e.target.value)} />
                         </Form.Item>
-                        {
-                        login === false?
                         <Form.Item
                             value={contactEmail}
                             name="contactEmail"
@@ -87,8 +84,7 @@ export default function ContactDetail() {
                             placeholder="YOUR EMAIL"
                             className="contact-input"
                             onChange={(e) => setContactEmail(e.target.value)} />
-                        </Form.Item>:<div>{email}</div>
-                        } 
+                        </Form.Item>
                         <Form.Item
                             value={contactMessage}
                             name="contactMessage"
@@ -173,8 +169,6 @@ export default function ContactDetail() {
                                 placeholder="NAME"
                                 onChange={(e) => setContactName(e.target.value)} />
                         </Form.Item>
-                        {
-                        login === false?
                         <Form.Item
                             value={contactEmail}
                             name="contactEmail"
@@ -194,8 +188,7 @@ export default function ContactDetail() {
                             placeholder="YOUR EMAIL"
                             className="contact-input"
                             onChange={(e) => setContactEmail(e.target.value)} />
-                        </Form.Item>:<div>{email}</div>
-                        } 
+                        </Form.Item>
                         <Form.Item
                             value={contactMessage}
                             name="contactMessage"
