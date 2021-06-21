@@ -2,10 +2,9 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../store/index';
 import { SET_ITEM_BUNS, SET_ITEM_MEAT } from '../utils/constants';
-import meat from '../json/meat.json';
-import burgerBuns from '../json/burgerBuns.json';
 import ingredients from '../json/ingredient.json';
 import materials from '../json/materials.json';
+import startCheckOut from '../images/btn-start-checkout.png';
 
 export default function CartList() {
     const {state} = useContext(StoreContext);
@@ -50,6 +49,12 @@ export default function CartList() {
                         </div>    
                     </div>
                     <div className="cart-total-price">TOTAL: NT {state.total + state.meatTotal}</div>
+                    <div className="cart-btn-checkout">
+                        <Link to="/login">
+                            <img src={startCheckOut} className="startCheckOut" />
+                        </Link>
+                    </div>
+                    
                 </div>
             );
 }

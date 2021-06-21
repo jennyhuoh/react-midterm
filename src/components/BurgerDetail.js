@@ -3,11 +3,7 @@ import { Row, Col, Button, Select, Radio, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import Cookie from 'js-cookie';
 import { StoreContext } from '../store/index';
-import bun from '../images/img-top-buns.png';
-import burgerBuns from '../json/burgerBuns.json';
 import materials from '../json/materials.json';
-import ingredient from '../json/ingredient.json';
-import next from '../images/btn-next.png';
 import line from '../images/line.png';
 import checkOut from '../images/btn-checkout.png';
 import { SET_PAGE_TOTAL,
@@ -26,8 +22,6 @@ import { SET_PAGE_TOTAL,
          ADD_CART_BUN,
          ADD_CART_MEAT
 } from '../utils/constants';
-import ButtonGroup from 'antd/lib/button/button-group';
-import mobileBuns from '../images/bun.png';
 import yellowDot from '../images/yellowDot.png';
 
 function BurgerDetail() {
@@ -318,7 +312,194 @@ function BurgerDetail() {
     return(
         <div>
             <div className="burgerTitle">＜ CUSTOMIZE YOUR BURGER ＞</div>
-            <Row className="selectSection">
+            <div className="show-mobile burger-mobile-box">
+                <div className="posa bunsBox bunBottom">
+                        {
+                            state.bun === "classic"?<img className="select-classic-buns" src={materials[1].bottomImage} />
+                            :state.bun === "black"?<img className="select-classic-buns" src={materials[0].bottomImage} />:""
+                        }
+                    </div>
+                    <div className="posa bunsBox tomato">
+                        {
+                            state.num3 != 0?<img className="select-classic-buns" src={materials[7].image} />:""
+                        }
+                    </div>
+                    <div className="posa bunsBox meat">
+                        {
+                            state.meat === "shrimp"?<img className="select-classic-buns" src={materials[3].image} />
+                            :state.meat === "bacon"?<img className="select-classic-buns" src={materials[4].image} />
+                            :state.meat === "beef"?<img className="select-classic-buns" src={materials[2].image} />:""
+                        }
+                    </div>
+                    <div className="posa bunsBox cheese">
+                        {
+                            state.num1 != 0?<img className="select-classic-buns" src={materials[5].image} />:""
+                        }
+                    </div>
+                    <div className="posa bunsBox onion">
+                        {
+                            state.num4 != 0?<img className="select-classic-buns" src={materials[8].image} />:""
+                        }
+                    </div>
+                    <div className="posa bunsBox vegetable">
+                        {
+                            state.num2 != 0?<img className="select-classic-buns" src={materials[6].image} />:""
+                        }
+                    </div>
+                    
+                    
+                    <div className="posa bunsBox">
+                        {
+                            state.bun === "classic"?<img className="select-classic-buns" src={materials[1].image} />
+                            :state.bun === "black"?<img className="select-classic-buns" src={materials[0].image} />:""
+                        }
+                    </div>
+                    <div className="totalPriceBox">
+                        <div className="totalPrice">   
+                            TOTAL: NT {state.total + state.meatTotal}
+                        </div>
+                    </div>
+                    <div className="rightBox">
+                        <div className="rightBoxBun">
+                            <div className="bun-title"><span><img className="yellowDot" src={yellowDot} /></span> BURGER BUNS</div>
+                            <Row>
+                                <Col span={12}>
+                                    <div className="rightBoxBun-select">
+                                        <Radio.Group  
+                                            options={bunsOptions}
+                                            optionType="button"
+                                            buttonStyle="solid"
+                                            value={value}
+                                            onChange={onChangeBun} />
+                                    </div>
+                                </Col>
+                                <Col span={12}>
+                                    <div className="lineBox">
+                                        <span className="line"><img className="imgLine" src={line} /></span>
+                                        <span className="selectPrice"> ${materials[0].price}</span>
+                                    </div>
+                                    <div className="lineBox2">
+                                        <span className="line"><img className="imgLine" src={line} /></span>
+                                        <span className="selectPrice"> ${materials[1].price}</span>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                        <div className="rightBoxMeat">
+                            <div className="bun-title"><span><img className="yellowDot" src={yellowDot} /></span> MEAT</div>
+                            <Row>
+                                <Col span={12}>
+                                    <div className="rightBoxBun-select">
+                                        <Radio.Group  
+                                            options={meatOptions}
+                                            optionType="button"
+                                            buttonStyle="solid"
+                                            value={valueMeat}
+                                            onChange={onChangeMeat} />
+                                    </div>
+                                </Col>
+                                <Col span={12}>
+                                    <div className="lineBox">
+                                        <span className="line"><img className="imgLine" src={line} /></span>
+                                        <span className="selectPrice"> ${materials[2].price}</span>
+                                    </div>
+                                    <div className="lineBox2">
+                                        <span className="line"><img className="imgLine" src={line} /></span>
+                                        <span className="selectPrice"> ${materials[3].price}</span>
+                                    </div>
+                                    <div className="lineBox2">
+                                        <span className="line"><img className="imgLine" src={line} /></span>
+                                        <span className="selectPrice"> ${materials[4].price}</span>
+                                    </div> 
+                                </Col>
+                            </Row>
+                        </div>
+                        <div className="rightBoxMeat rightBoxIngredients">
+                            <div className="bun-title"><span><img className="yellowDot" src={yellowDot} /></span> INGREDIENTS</div>
+                            {/* {ingredient.map(ii => (
+                                <div key={ii.id} className="ingredientBox">
+                                    <div className="ingredients-items">
+                                        <div className={`${ii.countInStock>0?iname_yellow:iname_gray}`}>{ii.name}</div>
+                                        <div className="line"><img src={line} /></div>
+                                        <div className="selectPrice selectPrice-ingredients"> ${ii.price}</div>
+                                        <div className="minusBg" onClick={onClickMinus}>
+                                            <div className="minus"></div>
+                                        </div>
+                                        <div className="ingredientNum">{state.num}</div>
+                                        <div className="plusBg">
+                                        <div className="minus"></div>
+                                            <div className="plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))} */}
+                            <div className="ingredients-items">
+                                <div class={`${state.num1>0?iname_yellow:iname_gray}`}>{materials[5].name}</div>
+                                <div className="line"><img className="imgLine" src={line} /></div>
+                                <div className="selectPrice selectPrice-ingredients"> ${materials[5].price}</div>
+                                <div className="minusBg" onClick={onClickMinus1}>
+                                    <div className="minus"></div>
+                                </div>
+                                <div className="ingredientNum">{state.num1}</div>
+                                <div className="plusBg" onClick={onClickPlus1}>
+                                    <div className="minus"></div>
+                                    <div className="plus"></div>
+                                </div>
+                            </div>
+                            <div className="ingredientBox">
+                                <div className="ingredients-items">
+                                    <div class={`${state.num2>0?iname_yellow:iname_gray}`}>{materials[6].name}</div>
+                                    <div className="line"><img className="imgLine" src={line} /></div>
+                                    <div className="selectPrice selectPrice-ingredients"> ${materials[6].price}</div>
+                                    <div className="minusBg" onClick={onClickMinus2}>
+                                        <div className="minus"></div>
+                                    </div>
+                                    <div className="ingredientNum">{state.num2}</div>
+                                    <div className="plusBg" onClick={onClickPlus2}>
+                                        <div className="minus"></div>
+                                        <div className="plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="ingredientBox">
+                                <div className="ingredients-items">
+                                    <div class={`${state.num3>0?iname_yellow:iname_gray}`}>{materials[7].name}</div>
+                                    <div className="line"><img className="imgLine" src={line} /></div>
+                                    <div className="selectPrice selectPrice-ingredients"> ${materials[7].price}</div>
+                                    <div className="minusBg" onClick={onClickMinus3}>
+                                        <div className="minus"></div>
+                                    </div>
+                                    <div className="ingredientNum">{state.num3}</div>
+                                    <div className="plusBg" onClick={onClickPlus3}>
+                                        <div className="minus"></div>
+                                        <div className="plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="ingredientBox">
+                                <div className="ingredients-items">
+                                    <div class={`${state.num4>0?iname_yellow:iname_gray}`}>{materials[8].name}</div>
+                                    <div className="line"><img className="imgLine" src={line} /></div>
+                                    <div className="selectPrice selectPrice-ingredients"> ${materials[8].price}</div>
+                                    <div className="minusBg" onClick={onClickMinus4}>
+                                        <div className="minus"></div>
+                                    </div>
+                                    <div className="ingredientNum">{state.num4}</div>
+                                    <div className="plusBg" onClick={onClickPlus4}>
+                                        <div className="minus"></div>
+                                        <div className="plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="btn-checkout-box" onChange={addToCart}>
+                        <Link to="/shoppingCart">
+                            <img src={checkOut} className="btn-checkout" />
+                        </Link>
+                    </div>
+            </div>
+            <Row className="selectSection show-desktop">
                 <Col span={12}>
                     
                     <div className="posa bunsBox bunBottom">

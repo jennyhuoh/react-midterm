@@ -45,8 +45,9 @@ export default function Header() {
     const [isOnTouch, setIsOnTouch] = useState(false);
     let hamContent;
     let hamBg;
+    
    if(isOnTouch) {
-        hamContent = <HamContent />;
+        hamContent = <HamContent isOnTouch={isOnTouch} />;
         hamBg = <HamBg />;
     }
     return (
@@ -55,7 +56,7 @@ export default function Header() {
             {hamContent}
             {hamBg}
             <div> 
-                <img className="logo" src={imgLogo} />
+                <Link to={"/"}><img className="logo" src={imgLogo} /></Link>
             </div>
             <div className="headerTextBox">
                 <Menu mode="horizontal" className="headerItems">

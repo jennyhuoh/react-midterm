@@ -106,7 +106,7 @@ export default function LoginCard() {
                     <div className="login-create">Create a new account</div>
                 </Link>
                 <div>
-                    <img src={or} />
+                    <img className="login-or" src={or} />
                 </div>
                 <div className="socialMedia">
                     <div class="socialMedia-imgBox"><img class="socialMedia-img" src={google} /></div>

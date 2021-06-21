@@ -1,13 +1,16 @@
 import { Link, useHistory } from 'react-router-dom';
 import { Menu, Modal } from 'antd';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import imgLogo from '../images/burger-logo.png';
 import { getJSON } from '../api/index';
 import { setPageContent } from '../actions/index';
 import { StoreContext } from '../store/index';
 import { logoutFromFirebase } from '../actions/index';
 import { LOGIN_STATE } from '../utils/constants';
-import CartSummaryClicked from '../components/CartSummaryClicked';
+import CartSummaryClicked from './CartSummaryClicked';
+import HamMenu from './HamMenu';
+import HamContent from './HamContent';
+import HamBg from './HamBg';
 import login from '../images/btn-login.png';
 import logout from '../images/btn-logout.png';
 
@@ -35,10 +38,20 @@ export default function CartHeader() {
             onOk() {},
           });
      }
+     const [isOnTouch, setIsOnTouch] = useState(false);
+    let hamContent;
+    let hamBg;
+    if(isOnTouch) {
+        hamContent = <HamContent isOnTouch={isOnTouch} />;
+        hamBg = <HamBg />;
+    }
     return (
         <header className="headerBgc">
-            <div>
-                <img className="logo" src={imgLogo} />
+            <HamMenu onClick={()=>setIsOnTouch(!isOnTouch)} isOnTouch={isOnTouch}/>
+            {hamContent}
+            {hamBg}
+            <div> 
+                <Link to={"/"}><img className="logo" src={imgLogo} /></Link>
             </div>
             <div className="headerTextBox">
             <Menu mode="horizontal" className="headerItems">
@@ -77,7 +90,7 @@ export default function CartHeader() {
                 <CartSummaryClicked />
                 {
                     state.login === true?<span onClick={handleLogout} className="wantToLogout"><img src={logout} className="accountimg"/></span>
-                    :state.login === false?<span><Link to="/login"><img src={login} className="accountimg"/></Link></span>:""
+                    :state.login === false?<span><Link to="/login"><img src={login} className="accountimg accountimg-cart"/></Link></span>:""
                 }
             </div>
         </header>

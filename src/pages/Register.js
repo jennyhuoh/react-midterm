@@ -2,7 +2,7 @@ import { Layout } from 'antd';
 import RegisterCard from '../components/RegisterCard';
 import CartHeader from '../components/CartHeader';
 import CartList from '../components/CartList';
-import CartFooter from '../components/CartFooter';
+import AppFooter from '../components/Footer';
 
 const { Header, Content, Footer } = Layout;
 
@@ -17,8 +17,8 @@ function Register() {
                     <CartList />
                     <RegisterCard />
                 </Content> 
-                <Footer>
-                    <CartFooter />
+                <Footer className="layout-footer">
+                    <AppFooter />
                 </Footer>
             </Layout>
         </Layout>

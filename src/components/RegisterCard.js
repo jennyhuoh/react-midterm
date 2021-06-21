@@ -85,7 +85,7 @@ export default function RegisterCard() {
                         </Form.Item>
                 </Form>
                 <div>
-                    <img src={or} />
+                    <img className="login-or" src={or} />
                 </div>
                 <div className="socialMedia">
                     <div class="socialMedia-imgBox"><img class="socialMedia-img" src={google} /></div>
